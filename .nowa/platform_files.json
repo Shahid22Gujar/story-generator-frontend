@@ -5,7 +5,11 @@
         "appBuildGradle": {}
     },
     "iOS": {
-        "infoPlist": {},
+        "infoPlist": {
+            "inDictSection": {
+                "micKey": "<key>NSMicrophoneUsageDescription</key>\n    <string>This app will use your microphone</string>"
+            }
+        },
         "podFile": {},
         "appDelegateSwift": {}
     }
