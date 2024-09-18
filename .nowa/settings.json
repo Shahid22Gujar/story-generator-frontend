@@ -1,0 +1,8 @@
+{
+    "version": "1.8.0",
+    "app": {
+        "name": "mvp",
+        "package_name": "com.example.mvp"
+    },
+    "main": {}
+}

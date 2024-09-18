@@ -1,0 +1,121 @@
+name: mvp
+description: A new Nowa project.
+publish_to: none
+version: 1.0.0+1
+environment:
+  sdk: ">=3.2.0 <4.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  nowa_runtime: ^0.0.37
+  flutter_html: ^3.0.0-beta.2
+  flutter_svg: ^2.0.7
+  rive: ^0.11.4
+  youtube_player_iframe_plus: ^2.3.2
+  provider: ^6.1.1
+  shared_preferences: ^2.2.3
+  dio: ^5.5.0+1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - assets/fonts/
+  fonts:
+    - family: ABeeZee
+      fonts:
+        - asset: assets/fonts/ABeeZee.ttf
+    - family: Abel
+      fonts:
+        - asset: assets/fonts/Abel.ttf
+    - family: Abhaya Libre
+      fonts:
+        - asset: assets/fonts/Abhaya Libre.ttf
+    - family: Abril Fatface
+      fonts:
+        - asset: assets/fonts/Abril Fatface.ttf
+    - family: Abyssinica SIL
+      fonts:
+        - asset: assets/fonts/Abyssinica SIL.ttf
+    - family: Aclonica
+      fonts:
+        - asset: assets/fonts/Aclonica.ttf
+    - family: ADLaM Display
+      fonts:
+        - asset: assets/fonts/ADLaM Display.ttf
+    - family: Aguafina Script
+      fonts:
+        - asset: assets/fonts/Aguafina Script.ttf
+    - family: Akaya Kanadaka
+      fonts:
+        - asset: assets/fonts/Akaya Kanadaka.ttf
+    - family: Akaya Telivigala
+      fonts:
+        - asset: assets/fonts/Akaya Telivigala.ttf
+    - family: Akronim
+      fonts:
+        - asset: assets/fonts/Akronim.ttf
+    - family: Albert Sans
+      fonts:
+        - asset: assets/fonts/Albert Sans.ttf
+    - family: Alegreya Sans SC
+      fonts:
+        - asset: assets/fonts/Alegreya Sans SC.ttf
+    - family: Alegreya Sans
+      fonts:
+        - asset: assets/fonts/Alegreya Sans.ttf
+    - family: Alex Brush
+      fonts:
+        - asset: assets/fonts/Alex Brush.ttf
+    - family: Alike Angular
+      fonts:
+        - asset: assets/fonts/Alike Angular.ttf
+    - family: Allerta Stencil
+      fonts:
+        - asset: assets/fonts/Allerta Stencil.ttf
+    - family: Allison
+      fonts:
+        - asset: assets/fonts/Allison.ttf
+    - family: Almendra Display
+      fonts:
+        - asset: assets/fonts/Almendra Display.ttf
+    - family: Almendra SC
+      fonts:
+        - asset: assets/fonts/Almendra SC.ttf
+    - family: Alumni Sans Collegiate One
+      fonts:
+        - asset: assets/fonts/Alumni Sans Collegiate One.ttf
+    - family: Alumni Sans Pinstripe
+      fonts:
+        - asset: assets/fonts/Alumni Sans Pinstripe.ttf
+    - family: Angkor
+      fonts:
+        - asset: assets/fonts/Angkor.ttf
+    - family: Annie Use Your Telescope
+      fonts:
+        - asset: assets/fonts/Annie Use Your Telescope.ttf
+    - family: Aoboshi One
+      fonts:
+        - asset: assets/fonts/Aoboshi One.ttf
+    - family: Architects Daughter
+      fonts:
+        - asset: assets/fonts/Architects Daughter.ttf
+    - family: Aref Ruqaa
+      fonts:
+        - asset: assets/fonts/Aref Ruqaa.ttf
+    - family: Arizonia
+      fonts:
+        - asset: assets/fonts/Arizonia.ttf
+    - family: Fraunces
+      fonts:
+        - asset: assets/fonts/Fraunces.ttf
+    - family: Inter Tight
+      fonts:
+        - asset: assets/fonts/Inter Tight.ttf
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter.ttf

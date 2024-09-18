@@ -1,0 +1,153 @@
+{
+    "paths": {
+        "https://b2c4-182-77-50-63.ngrok-free.app/accounts/register/": {
+            "post": {
+                "collection": "BackendCollection",
+                "operationId": "Register",
+                "summary": "Nowa Auto Generated",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "value": null
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "https://b2c4-182-77-50-63.ngrok-free.app/accounts/logout/": {
+            "post": {
+                "collection": "BackendCollection",
+                "operationId": "Logout",
+                "summary": "Nowa Auto Generated",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "value": null
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "https://b2c4-182-77-50-63.ngrok-free.app/accounts/login/": {
+            "post": {
+                "collection": "BackendCollection",
+                "operationId": "login",
+                "summary": "Nowa Auto Generated",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "value": {
+                                    "refresh": "[refresh]",
+                                    "access": "[access]"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "https://b2c4-182-77-50-63.ngrok-free.app/accounts/story": {
+            "get": {
+                "collection": "BackendCollection",
+                "operationId": "ListStories",
+                "summary": "Nowa Auto Generated",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array"
+                                },
+                                "value": [
+                                    {
+                                        "id": 0,
+                                        "time_period": "[timePeriod]",
+                                        "character": "[character]",
+                                        "writing_style": "[writingStyle]",
+                                        "story_text": "[storyText]",
+                                        "story_audio": null,
+                                        "created_at": "[createdAt]",
+                                        "updated_at": "[updatedAt]",
+                                        "is_audio_to_generate": false
+                                    },
+                                    {
+                                        "id": 0,
+                                        "time_period": "[timePeriod]",
+                                        "character": "[character]",
+                                        "writing_style": "[writingStyle]",
+                                        "story_text": "[storyText]",
+                                        "story_audio": null,
+                                        "created_at": "[createdAt]",
+                                        "updated_at": "[updatedAt]",
+                                        "is_audio_to_generate": false
+                                    },
+                                    {
+                                        "id": 0,
+                                        "time_period": "[timePeriod]",
+                                        "character": "[character]",
+                                        "writing_style": "[writingStyle]",
+                                        "story_text": "[storyText]",
+                                        "story_audio": null,
+                                        "created_at": "[createdAt]",
+                                        "updated_at": "[updatedAt]",
+                                        "is_audio_to_generate": false
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "collection": "BackendCollection",
+                "operationId": "CreateStoriesByGuestUser",
+                "summary": "Nowa Auto Generated",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "value": {
+                                    "time_period": "[timePeriod]",
+                                    "character": "[character]",
+                                    "writing_style": "[writingStyle]",
+                                    "story_text": "[storyText]",
+                                    "story_audio": null,
+                                    "created_at": "[createdAt]",
+                                    "updated_at": "[updatedAt]",
+                                    "is_audio_to_generate": false
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

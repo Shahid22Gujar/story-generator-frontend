@@ -1,0 +1,24 @@
+{
+    "canvases": [
+        {
+            "x": -142,
+            "y": 778,
+            "w": 390,
+            "h": 978,
+            "widget": "const sign_up()",
+            "deps": [
+                "lib/sign_up.dart"
+            ]
+        },
+        {
+            "x": 705,
+            "y": 1084,
+            "w": 390,
+            "h": 844,
+            "widget": "const homepage()",
+            "deps": [
+                "lib/homepage.dart"
+            ]
+        }
+    ]
+}

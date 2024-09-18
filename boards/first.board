@@ -1,0 +1,502 @@
+{
+    "showGrid": true,
+    "canvases": [
+        {
+            "x": -5632,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const homepage()",
+            "deps": [
+                "lib/homepage.dart"
+            ]
+        },
+        {
+            "x": 5853,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const Empty1()",
+            "deps": [
+                "lib/Empty1.dart"
+            ]
+        },
+        {
+            "x": -4957,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const authenticated_homepage()",
+            "deps": [
+                "lib/authenticated_homepage.dart"
+            ]
+        },
+        {
+            "x": -4364,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const text_screen()",
+            "deps": [
+                "lib/text_screen.dart"
+            ]
+        },
+        {
+            "x": -3807,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const text_time_period_screen()",
+            "deps": [
+                "lib/text_time_period_screen.dart"
+            ]
+        },
+        {
+            "x": -3137,
+            "y": -2284,
+            "w": 390,
+            "h": 844,
+            "widget": "const text_character_screen()",
+            "deps": [
+                "lib/text_character_screen.dart"
+            ]
+        },
+        {
+            "x": -2574,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const text_writing_style_screen()",
+            "deps": [
+                "lib/text_writing_style_screen.dart"
+            ]
+        },
+        {
+            "x": -1969,
+            "y": -2279,
+            "w": 390,
+            "h": 874,
+            "widget": "const text_output_screen()",
+            "deps": [
+                "lib/text_output_screen.dart"
+            ]
+        },
+        {
+            "x": 434,
+            "y": -686,
+            "h": 38,
+            "widget": "const Text('',style:TextStyle(),)"
+        },
+        {
+            "x": -1469,
+            "y": -2264,
+            "w": 390,
+            "h": 874,
+            "widget": "const text_output_screen_continue()",
+            "deps": [
+                "lib/text_output_screen_continue.dart"
+            ]
+        },
+        {
+            "x": -971,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const text_output_screen_end()",
+            "deps": [
+                "lib/text_output_screen_end.dart"
+            ]
+        },
+        {
+            "x": -468,
+            "y": -2251.5,
+            "w": 348,
+            "h": 819,
+            "widget": "const mvp9()",
+            "deps": [
+                "lib/mvp9.dart"
+            ]
+        },
+        {
+            "x": -39,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const mvp9a()",
+            "deps": [
+                "lib/mvp9a.dart"
+            ]
+        },
+        {
+            "x": 899,
+            "y": -2251.5,
+            "w": 390,
+            "h": 844,
+            "widget": "const mvp10a()",
+            "deps": [
+                "lib/mvp10a.dart"
+            ]
+        },
+        {
+            "x": 434,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const mvp10()",
+            "deps": [
+                "lib/mvp10.dart"
+            ]
+        },
+        {
+            "x": 1415,
+            "y": -2251.5,
+            "w": 390,
+            "h": 844,
+            "widget": "const audio_screen()",
+            "deps": [
+                "lib/audio_screen.dart"
+            ]
+        },
+        {
+            "x": 1885,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const audio_basic_info_screen()",
+            "deps": [
+                "lib/audio_basic_info_screen.dart"
+            ]
+        },
+        {
+            "x": 2348,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const audio_time_period_screen()",
+            "deps": [
+                "lib/audio_time_period_screen.dart"
+            ]
+        },
+        {
+            "x": 2818,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const audio_character_screen()",
+            "deps": [
+                "lib/audio_character_screen.dart"
+            ]
+        },
+        {
+            "x": 3297,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const audio_writing_style_screen()",
+            "deps": [
+                "lib/audio_writing_style_screen.dart"
+            ]
+        },
+        {
+            "x": 3776,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const audio_output_screen()",
+            "deps": [
+                "lib/audio_output_screen.dart"
+            ]
+        },
+        {
+            "x": 4238,
+            "y": -2264,
+            "w": 390,
+            "h": 860,
+            "widget": "const audio_output_feedback_screen()",
+            "deps": [
+                "lib/audio_output_feedback_screen.dart"
+            ]
+        },
+        {
+            "x": 4778,
+            "y": -2251.5,
+            "w": 390,
+            "h": 844,
+            "widget": "const audio_output_save_screen()",
+            "deps": [
+                "lib/audio_output_save_screen.dart"
+            ]
+        },
+        {
+            "x": 5309,
+            "y": -2264,
+            "w": 344,
+            "h": 748,
+            "widget": "const my_stories_generated_screen()",
+            "deps": [
+                "lib/my_stories_generated_screen.dart"
+            ]
+        },
+        {
+            "x": 6866,
+            "y": -2251.5,
+            "w": 390,
+            "h": 844,
+            "widget": "const Empty2()",
+            "deps": [
+                "lib/Empty2.dart"
+            ]
+        },
+        {
+            "x": 6370,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const story_share_save_option_screen()",
+            "deps": [
+                "lib/story_share_save_option_screen.dart"
+            ]
+        },
+        {
+            "x": 7343,
+            "y": -2241,
+            "w": 369,
+            "h": 837,
+            "widget": "const mvp16()",
+            "deps": [
+                "lib/mvp16.dart"
+            ]
+        },
+        {
+            "x": 7845,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const mvp17()",
+            "deps": [
+                "lib/mvp17.dart"
+            ]
+        },
+        {
+            "x": 8318,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const mvp18()",
+            "deps": [
+                "lib/mvp18.dart"
+            ]
+        },
+        {
+            "x": 8865,
+            "y": -2264,
+            "w": 390,
+            "h": 844,
+            "widget": "const mvp19()",
+            "deps": [
+                "lib/mvp19.dart"
+            ]
+        },
+        {
+            "x": -6158,
+            "y": -2295,
+            "w": 390,
+            "h": 844,
+            "widget": "const login()",
+            "deps": [
+                "lib/login.dart"
+            ]
+        },
+        {
+            "x": -6674,
+            "y": -2295,
+            "w": 390,
+            "h": 844,
+            "widget": "Stack(alignment:const Alignment(0,0),children:[Positioned(top:0,left:0,width:390,height:844,child:NFlex(direction:Axis.vertical,spacing:0,children:[FlexSizedBox(width:390,height:844,child:mvp0()!,)],mainAxisSize:MainAxisSize.min,mainAxisAlignment:MainAxisAlignment.start,),)],)"
+        },
+        {
+            "x": -332,
+            "y": -3439,
+            "w": 393,
+            "h": 834,
+            "widget": "audioPlayerPage()!"
+        },
+        {
+            "x": 128,
+            "y": -3426,
+            "w": 393,
+            "h": 808,
+            "widget": "const StoryAudioPlayerScreen()",
+            "deps": [
+                "lib/StoryAudioPlayerScreen.dart"
+            ]
+        },
+        {
+            "x": -4365.5,
+            "y": -1330,
+            "w": 393,
+            "h": 808,
+            "widget": "const text_screen_authenticated_screen()",
+            "deps": [
+                "lib/text_screen_authenticated_screen.dart"
+            ]
+        },
+        {
+            "x": -3759,
+            "y": -1330,
+            "w": 393,
+            "h": 808,
+            "widget": "const text_time_period_authenticate_screen()",
+            "deps": [
+                "lib/text_time_period_authenticate_screen.dart"
+            ]
+        },
+        {
+            "x": -3138.5,
+            "y": -1330,
+            "w": 393,
+            "h": 808,
+            "widget": "const text_character_authenticate_screen()",
+            "deps": [
+                "lib/text_character_authenticate_screen.dart"
+            ]
+        },
+        {
+            "x": -2535,
+            "y": -1335,
+            "w": 393,
+            "h": 808,
+            "widget": "const text_writing_style_authenticated_screen()",
+            "deps": [
+                "lib/text_writing_style_authenticated_screen.dart"
+            ]
+        },
+        {
+            "x": 1415,
+            "y": -1262,
+            "w": 414,
+            "h": 808,
+            "widget": "const audio_basic_info_new_screen()",
+            "deps": [
+                "lib/audio_basic_info_new_screen.dart"
+            ]
+        },
+        {
+            "x": 1955,
+            "y": -1262,
+            "w": 393,
+            "h": 808,
+            "widget": "const audio_time_period_new_screen()",
+            "deps": [
+                "lib/audio_time_period_new_screen.dart"
+            ]
+        },
+        {
+            "x": 2480,
+            "y": -1226,
+            "w": 452,
+            "h": 808,
+            "widget": "const audio_character_new_screen()",
+            "deps": [
+                "lib/audio_character_new_screen.dart"
+            ]
+        },
+        {
+            "x": 3114,
+            "y": -1226,
+            "w": 393,
+            "h": 808,
+            "widget": "const audio_writing_style_new_screen()",
+            "deps": [
+                "lib/audio_writing_style_new_screen.dart"
+            ]
+        },
+        {
+            "x": 3805,
+            "y": -1226,
+            "w": 393,
+            "h": 808,
+            "widget": "const StoryAudioPlayerScreen()",
+            "deps": [
+                "lib/StoryAudioPlayerScreen.dart"
+            ]
+        },
+        {
+            "x": 1415,
+            "y": -107,
+            "w": 450,
+            "h": 808,
+            "widget": "const audio_basic_info_authenticated_screen()",
+            "deps": [
+                "lib/audio_basic_info_authenticated_screen.dart"
+            ]
+        },
+        {
+            "x": 1983,
+            "y": -107,
+            "w": 393,
+            "h": 808,
+            "widget": "const audio_time_period_authenticated_new_screen()",
+            "deps": [
+                "lib/audio_time_period_authenticated_new_screen.dart"
+            ]
+        },
+        {
+            "x": 2480,
+            "y": -107,
+            "w": 412,
+            "h": 808,
+            "widget": "const audio_character_authenticated_new_screen()",
+            "deps": [
+                "lib/audio_character_authenticated_new_screen.dart"
+            ]
+        },
+        {
+            "x": 3171,
+            "y": -107,
+            "w": 435,
+            "h": 808,
+            "widget": "const audio_writing_style_authenticated_new_screen()",
+            "deps": [
+                "lib/audio_writing_style_authenticated_new_screen.dart"
+            ]
+        },
+        {
+            "x": 5569,
+            "y": -1420,
+            "w": 195.5,
+            "h": 176,
+            "widget": "Stack(alignment:const Alignment(0,0),children:[Positioned(top:0,left:0,width:54,height:45,child:Container(decoration:BoxDecoration(color:const Color(4291085508),borderRadius:BorderRadius.circular(20),image:DecorationImage(fit:BoxFit.cover,image:const AssetImage('assets/DALL·E 2024-07-10 18.41.10 - Create a modern logo for \\'Stories with Joy\\' featuring the letters \\'JOY\\'. The logo should include a stylized, geometric representation of a feather qui (1).jpg')),),),),const Positioned(top:51,left:0,width:24,height:24,child:Icon(IconData(983503,fontFamily:'MaterialIcons'),color:Color(4278190080),),),const Positioned(top:83.5,left:30,width:24,height:24,child:Icon(IconData(57941,fontFamily:'MaterialIcons'),color:Color(4278190080),),),const Positioned(top:83.5,left:64,width:24,height:24,child:Icon(IconData(984460,fontFamily:'MaterialIcons'),color:Color(4278190080),),),const Positioned(top:51,left:30,width:24,height:24,child:Icon(IconData(983503,fontFamily:'MaterialIcons'),color:Color(4278190080),),),const Positioned(top:51,left:59,width:24,height:24,child:Icon(IconData(983503,fontFamily:'MaterialIcons'),color:Color(4278190080),),),const Positioned(top:83.5,left:0,width:24,height:24,child:Icon(IconData(984673,fontFamily:'MaterialIcons'),color:Color(4278190080),),),Positioned(top:32.5,left:126,width:69.5,height:75,child:Container(decoration:BoxDecoration(color:const Color(4291085508),borderRadius:BorderRadius.circular(100),image:DecorationImage(fit:BoxFit.cover,image:const AssetImage('assets/DALL·E 2024-07-10 20.06.46 - Create a simple round icon featuring the phrase \\'New Story\\' in a blueish-grey color scheme. The design should be clean and minimalist, with the text i.png')),),),),Positioned(top:138,left:36,width:119,height:38,child:CustomButton(onPressed:(){\n  Navigator.of(context).push(MaterialPageRoute(builder:(context)=> const authenticated_homepage()));\n},child:Text('Home',style:TextStyle(fontFamily:'Abril Fatface',fontWeight:FontWeight.w400,fontSize:20,color:const Color(4294967295),backgroundColor:const Color(4278219392),),),color:const Color(4278219392),),)],)",
+            "deps": [
+                "lib/authenticated_homepage.dart"
+            ]
+        },
+        {
+            "x": 5116,
+            "y": -1126,
+            "w": 332,
+            "h": 104,
+            "widget": "Stack(alignment:const Alignment(0,0),children:[Positioned(top:0,left:0,width:395,height:107,child:Stack(alignment:const Alignment(0,0),children:[Positioned(top:0,left:0,width:329.5,height:98,child:Material(child:Text('The Last Watcher',style:TextStyle(fontFamily:'Fraunces',fontSize:20,color:const Color(4294967295),fontWeight:FontWeight.w700,shadows:[],backgroundColor:const Color(4282157982),),textAlign:TextAlign.center,),color:const Color(4282157982),shape:RoundedRectangleBorder(side:const BorderSide(color:Color(4278219392),width:1),borderRadius:BorderRadius.circular(14)),),),Positioned(top:0,left:192.5,child:IconButton(onPressed:(){\n},),),const Positioned(top:16,left:266.5,child:Icon(IconData(61508,fontFamily:'MaterialIcons'),color:Color(4278190080),),),const Positioned(top:16,left:305.5,child:Icon(IconData(983503,fontFamily:'MaterialIcons'),color:Color(4278190080),),),const Positioned(top:16,left:346.5,child:Icon(IconData(984460,fontFamily:'MaterialIcons'),color:Color(4278190080),),),const Positioned(top:57,left:266.5,child:Icon(IconData(983503,fontFamily:'MaterialIcons'),color:Color(4278190080),),),const Positioned(top:57,left:305.5,child:Icon(IconData(983503,fontFamily:'MaterialIcons'),color:Color(4278190080),),),const Positioned(top:57,left:346.5,child:Icon(IconData(984426,fontFamily:'MaterialIcons'),color:Color(4278190080),applyTextScaling:false,fill:1,),),Positioned(top:0,left:217.5,width:38,height:36,child:Container(decoration:BoxDecoration(color:const Color(4291085508),borderRadius:BorderRadius.circular(100),image:DecorationImage(fit:BoxFit.cover,image:const AssetImage('assets/DALL·E 2024-07-12 12.42.02 - Create a simple round icon featuring a \\'reading eye\\' symbol in a blueish-grey color scheme. The design should be clean and minimalist, with the symbol (1).png')),),),),Positioned(top:66,left:218.5,width:36,height:32,child:Container(decoration:BoxDecoration(color:const Color(4291085508),borderRadius:BorderRadius.circular(100),image:DecorationImage(fit:BoxFit.cover,image:const AssetImage('assets/DALL·E 2024-07-12 12.43.48 - Create a simple round icon representing listening to a story in a blueish-grey color scheme. The design should be clean and minimalist, incorporating .png')),),),)],),)],)"
+        },
+        {
+            "x": 4511,
+            "y": -728,
+            "w": 226,
+            "h": 92,
+            "widget": "const component()",
+            "deps": [
+                "lib/component.dart"
+            ]
+        },
+        {
+            "x": 4365,
+            "y": -936,
+            "w": 388,
+            "h": 83,
+            "widget": "const tekkiContainer2()",
+            "deps": [
+                "lib/tekkiContainer2.dart"
+            ]
+        }
+    ]
+}

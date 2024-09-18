@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:nowa_runtime/nowa_runtime.dart';
+import 'package:mvp/Stack1.dart';
+
+@NowaGenerated({'auto-width': 321, 'auto-height': 101})
+class container extends StatelessWidget {
+  @NowaGenerated({'loader': 'auto-constructor'})
+  const container({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Stack1();
+  }
+}
