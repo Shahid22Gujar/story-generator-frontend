@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:nowa_runtime/nowa_runtime.dart';
 import 'package:mvp/story_output.dart';
-import 'package:mvp/dynamic_asset.dart';
 import 'package:mvp/api/BackendCollection.api.dart';
+import 'package:mvp/dynamic_asset.dart';
+import 'package:mvp/login_response.dart';
 import 'package:mvp/story_input.dart';
-import 'package:mvp/text_time_period_screen.dart';
+import 'package:mvp/text_time_period_authenticate_screen.dart';
 
-@NowaGenerated({'auto-width': 390, 'auto-height': 859})
-class text_output_screen extends StatefulWidget {
+@NowaGenerated({'auto-height': 719, 'auto-width': 393})
+class text_output_auth_screen extends StatefulWidget {
   @NowaGenerated({'loader': 'auto-constructor'})
-  const text_output_screen({super.key});
+  const text_output_auth_screen({super.key});
 
   @override
-  State<text_output_screen> createState() {
-    return _text_output_screenState();
+  State<text_output_auth_screen> createState() {
+    return _text_output_auth_screenState();
   }
 }
 
 @NowaGenerated()
-class _text_output_screenState extends State<text_output_screen> {
+class _text_output_auth_screenState extends State<text_output_auth_screen> {
   String? regenerate_progress =
       'https://sgujar.pythonanywhere.com/media/assets/NewDoItAgain.jpeg';
 
@@ -28,7 +29,7 @@ class _text_output_screenState extends State<text_output_screen> {
       body: SafeArea(
         child: NFlex(
           direction: Axis.vertical,
-          spacing: 84,
+          spacing: 107,
           children: [
             const FlexSizedBox(
               width: null,
@@ -43,7 +44,8 @@ class _text_output_screenState extends State<text_output_screen> {
               ),
             ),
             FlexSizedBox(
-              height: 533,
+              width: double.infinity,
+              height: 409,
               child: SingleChildScrollView(
                 child: Text(
                   story_output.of(context).story_text_output!,
@@ -51,11 +53,10 @@ class _text_output_screenState extends State<text_output_screen> {
                   textAlign: TextAlign.start,
                 ),
               ),
-              width: double.infinity,
             ),
             FlexSizedBox(
               width: 393,
-              height: 92,
+              height: 124,
               child: Container(
                 decoration: BoxDecoration(
                     color: const Color(4278219392),
@@ -63,6 +64,42 @@ class _text_output_screenState extends State<text_output_screen> {
                 child: Stack(
                   alignment: const Alignment(0, 0),
                   children: [
+                    Positioned(
+                      top: 21.5,
+                      left: 26,
+                      width: 73,
+                      height: 79,
+                      child: GestureDetector(
+                        child: Image(
+                          image: const AssetImage(
+                              'assets/DALL·E 2024-07-10 19.53.29 - Create a simple round icon featuring the phrase \'Love it\' in a blueish-grey color scheme. The design should be clean and minimalist, with the text in .png'),
+                          fit: BoxFit.cover,
+                        ),
+                        onTap: () {
+                          BackendCollection()
+                              .feedback(
+                                  story_id: story_output
+                                      .of(context, listen: false)
+                                      .story_id)
+                              .then((value) {
+                            showDialog(
+                              builder: (context) => const AlertDialog(
+                                title: Text(
+                                  'Loved',
+                                ),
+                              ),
+                              useRootNavigator: false,
+                              context: context,
+                              anchorPoint: const Offset(0, 0),
+                            ).then((value) {}, onError: (error) {
+                              print('error: ${error}');
+                            });
+                          }, onError: (error) {
+                            print('error: ${error}');
+                          });
+                        },
+                      ),
+                    ),
                     Positioned(
                       top: 22.5,
                       left: 154.5,
@@ -79,7 +116,10 @@ class _text_output_screenState extends State<text_output_screen> {
                                   .processing_img;
                           setState(() {});
                           BackendCollection()
-                              .CreateStoriesByGuestUser(
+                              .CreateStoriesByLoggedInUser(
+                            jwt_api_token: login_response
+                                .of(context, listen: false)
+                                .access_token,
                             time_period: story_input
                                 .of(context, listen: false)
                                 .time_period_input,
@@ -89,7 +129,6 @@ class _text_output_screenState extends State<text_output_screen> {
                             writing_style: story_input
                                 .of(context, listen: false)
                                 .writing_style_input,
-                            is_audio_to_generate: false,
                             is_regenerate: true,
                           )
                               .then((value) {
@@ -100,9 +139,11 @@ class _text_output_screenState extends State<text_output_screen> {
                             story_output
                                 .of(context, listen: false)
                                 .story_text_output = value?.storyText;
+                            story_output.of(context, listen: false).story_id =
+                                value?.id;
                             Navigator.of(context).push(MaterialPageRoute(
                                 builder: (context) =>
-                                    const text_output_screen()));
+                                    const text_output_auth_screen()));
                           }, onError: (error) {
                             regenerate_progress =
                                 DynamicAsset.of(context, listen: false)
@@ -127,7 +168,7 @@ class _text_output_screenState extends State<text_output_screen> {
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) =>
-                                  const text_time_period_screen()));
+                                  const text_time_period_authenticate_screen()));
                         },
                       ),
                     )
@@ -140,7 +181,12 @@ class _text_output_screenState extends State<text_output_screen> {
           mainAxisAlignment: MainAxisAlignment.start,
         ),
       ),
-      backgroundColor: const Color(4294967295),
+      appBar: AppBar(
+        title: const Text(
+          'Back',
+          style: TextStyle(),
+        ),
+      ),
     );
   }
 }

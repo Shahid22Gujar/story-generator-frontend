@@ -134,6 +134,13 @@ class _text_time_period_authenticate_screenState
         ),
       ),
       backgroundColor: const Color(4294967295),
+      appBar: AppBar(
+        title: const Text(
+          'Back',
+          style: TextStyle(),
+        ),
+        backgroundColor: const Color(4294967295),
+      ),
     );
   }
 }

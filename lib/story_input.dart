@@ -4,17 +4,19 @@ import 'package:provider/provider.dart';
 
 @NowaGenerated()
 class story_input extends ChangeNotifier {
+  story_input();
+
   factory story_input.of(BuildContext context, {bool listen = true}) {
     return Provider.of<story_input>(context, listen: listen);
   }
 
-  story_input();
+  String? story_genre = 'fiction';
 
-  bool? is_audio_to_generate = false;
-
-  String? writing_style_input = '';
+  String? time_period_input = '';
 
   String? character_input = '';
 
-  String? time_period_input = '';
+  String? writing_style_input = '';
+
+  bool? is_audio_to_generate = false;
 }

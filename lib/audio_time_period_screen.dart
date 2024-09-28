@@ -2,10 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:nowa_runtime/nowa_runtime.dart';
 
 @NowaGenerated({'auto-width': 390, 'auto-height': 844})
-class audio_time_period_screen extends StatelessWidget {
+class audio_time_period_screen extends StatefulWidget {
   @NowaGenerated({'loader': 'auto-constructor'})
   const audio_time_period_screen({super.key});
 
+  @override
+  State<audio_time_period_screen> createState() {
+    return _audio_time_period_screenState();
+  }
+}
+
+@NowaGenerated()
+class _audio_time_period_screenState extends State<audio_time_period_screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

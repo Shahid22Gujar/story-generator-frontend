@@ -122,7 +122,7 @@
             },
             "post": {
                 "collection": "BackendCollection",
-                "operationId": "CreateStoriesByGuestUser",
+                "operationId": "CreateStoriesByLoggedInUser",
                 "summary": "Nowa Auto Generated",
                 "description": "",
                 "responses": {
@@ -134,6 +134,8 @@
                                     "type": "object"
                                 },
                                 "value": {
+                                    "id": "[id]",
+                                    "genre": null,
                                     "time_period": "[timePeriod]",
                                     "character": "[character]",
                                     "writing_style": "[writingStyle]",
@@ -141,8 +143,95 @@
                                     "story_audio": null,
                                     "created_at": "[createdAt]",
                                     "updated_at": "[updatedAt]",
-                                    "is_audio_to_generate": false
+                                    "is_audio_to_generate": false,
+                                    "is_regenerate": false
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/": {
+            "get": {
+                "collection": "BackendCollection",
+                "operationId": "feedback",
+                "summary": "Nowa Auto Generated",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "value": null
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "https://b2c4-182-77-50-63.ngrok-free.app/accounts/feedback/": {
+            "get": {
+                "collection": "BackendCollection",
+                "operationId": "feedback",
+                "summary": "Nowa Auto Generated",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "value": null
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "collection": "BackendCollection",
+                "operationId": "feedback",
+                "summary": "Nowa Auto Generated",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "value": {
+                                    "id": "[id]",
+                                    "story_reference": "[storyReference]",
+                                    "feedback": "[feedback]"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "https://sgujar.pythonanywhere.com/accounts/story": {
+            "post": {
+                "collection": "BackendCollection",
+                "operationId": "CreateStoriesByGuestUser",
+                "summary": "Nowa Auto Generated",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "value": null
                             }
                         }
                     }

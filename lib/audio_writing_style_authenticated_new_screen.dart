@@ -4,7 +4,7 @@ import 'package:mvp/api/BackendCollection.api.dart';
 import 'package:mvp/login_response.dart';
 import 'package:mvp/story_input.dart';
 import 'package:mvp/story_output.dart';
-import 'package:mvp/StoryAudioPlayerScreen.dart';
+import 'package:mvp/story_audio_player_screen.dart';
 
 @NowaGenerated({'auto-width': 435})
 class audio_writing_style_authenticated_new_screen extends StatefulWidget {
@@ -21,6 +21,8 @@ class audio_writing_style_authenticated_new_screen extends StatefulWidget {
 class _audio_writing_style_authenticated_new_screenState
     extends State<audio_writing_style_authenticated_new_screen> {
   TextEditingController audio_writing_style_input = TextEditingController();
+
+  bool? story_loader = false;
 
   @override
   Widget build(BuildContext context) {
@@ -99,6 +101,8 @@ class _audio_writing_style_authenticated_new_screenState
               width: 210,
               child: CustomButton(
                 onPressed: () {
+                  story_loader = true;
+                  setState(() {});
                   BackendCollection()
                       .CreateStoriesByLoggedInUser(
                     jwt_api_token:
@@ -112,16 +116,20 @@ class _audio_writing_style_authenticated_new_screenState
                     writing_style: audio_writing_style_input.text,
                   )
                       .then((value) {
+                    story_loader = false;
+                    setState(() {});
                     story_output.of(context, listen: false).story_audio_url =
                         value?.storyAudio;
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => const StoryAudioPlayerScreen()));
                   }, onError: (error) {
                     print('error: ${error}');
+                    story_loader = false;
+                    setState(() {});
                   });
                 },
                 child: Text(
-                  'Enter',
+                  'Generate Story',
                   style: TextStyle(
                     fontFamily: 'Abril Fatface',
                     fontWeight: FontWeight.w400,
@@ -132,11 +140,28 @@ class _audio_writing_style_authenticated_new_screenState
                 ),
                 color: const Color(4278219392),
               ),
+            ),
+            Positioned(
+              top: 424,
+              left: 178.5,
+              child: Visibility(
+                visible: story_loader!,
+                child: const CircularProgressIndicator(
+                  backgroundColor: Color(4293450972),
+                ),
+              ),
             )
           ],
         ),
       ),
       backgroundColor: const Color(4294967295),
+      appBar: AppBar(
+        title: const Text(
+          'Back',
+          style: TextStyle(),
+        ),
+        backgroundColor: const Color(4294967295),
+      ),
     );
   }
 }

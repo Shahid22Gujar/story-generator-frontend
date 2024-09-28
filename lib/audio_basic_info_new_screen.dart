@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nowa_runtime/nowa_runtime.dart';
+import 'package:mvp/story_input.dart';
 import 'package:mvp/audio_time_period_new_screen.dart';
 
 @NowaGenerated({'auto-width': 414, 'auto-height': 825})
@@ -16,7 +17,7 @@ class audio_basic_info_new_screen extends StatefulWidget {
 @NowaGenerated()
 class _audio_basic_info_new_screenState
     extends State<audio_basic_info_new_screen> {
-  TextEditingController text = TextEditingController();
+  TextEditingController audio_genre_input = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +66,8 @@ class _audio_basic_info_new_screenState
               width: 210,
               child: CustomButton(
                 onPressed: () {
+                  story_input.of(context, listen: false).story_genre =
+                      audio_genre_input.text;
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) =>
                           const audio_time_period_new_screen()));
@@ -122,7 +125,16 @@ class _audio_basic_info_new_screenState
                     width: 259,
                     height: 41,
                     child: TextFormField(
-                      controller: text,
+                      controller: audio_genre_input,
+                    ),
+                  ),
+                  Positioned(
+                    top: 29.5,
+                    left: 31,
+                    width: 282,
+                    height: 45,
+                    child: TextFormField(
+                      controller: audio_genre_input,
                     ),
                   )
                 ],
@@ -132,6 +144,13 @@ class _audio_basic_info_new_screenState
         ),
       ),
       backgroundColor: const Color(4294967295),
+      appBar: AppBar(
+        title: const Text(
+          'Back',
+          style: TextStyle(),
+        ),
+        backgroundColor: const Color(4294967295),
+      ),
     );
   }
 }

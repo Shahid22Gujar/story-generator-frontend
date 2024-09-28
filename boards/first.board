@@ -228,7 +228,7 @@
             ]
         },
         {
-            "x": 5309,
+            "x": 5311,
             "y": -2264,
             "w": 344,
             "h": 748,
@@ -322,16 +322,6 @@
             "widget": "audioPlayerPage()!"
         },
         {
-            "x": 128,
-            "y": -3426,
-            "w": 393,
-            "h": 808,
-            "widget": "const StoryAudioPlayerScreen()",
-            "deps": [
-                "lib/StoryAudioPlayerScreen.dart"
-            ]
-        },
-        {
             "x": -4365.5,
             "y": -1330,
             "w": 393,
@@ -372,7 +362,7 @@
             ]
         },
         {
-            "x": 1415,
+            "x": 899,
             "y": -1262,
             "w": 414,
             "h": 808,
@@ -386,10 +376,7 @@
             "y": -1262,
             "w": 393,
             "h": 808,
-            "widget": "const audio_time_period_new_screen()",
-            "deps": [
-                "lib/audio_time_period_new_screen.dart"
-            ]
+            "widget": "audio_time_period_new_screen()!"
         },
         {
             "x": 2480,
@@ -418,7 +405,7 @@
             "h": 808,
             "widget": "const StoryAudioPlayerScreen()",
             "deps": [
-                "lib/StoryAudioPlayerScreen.dart"
+                "lib/story_audio_player_screen.dart"
             ]
         },
         {
@@ -473,30 +460,97 @@
         },
         {
             "x": 5116,
-            "y": -1126,
+            "y": -1115,
             "w": 332,
-            "h": 104,
+            "h": 93,
             "widget": "Stack(alignment:const Alignment(0,0),children:[Positioned(top:0,left:0,width:395,height:107,child:Stack(alignment:const Alignment(0,0),children:[Positioned(top:0,left:0,width:329.5,height:98,child:Material(child:Text('The Last Watcher',style:TextStyle(fontFamily:'Fraunces',fontSize:20,color:const Color(4294967295),fontWeight:FontWeight.w700,shadows:[],backgroundColor:const Color(4282157982),),textAlign:TextAlign.center,),color:const Color(4282157982),shape:RoundedRectangleBorder(side:const BorderSide(color:Color(4278219392),width:1),borderRadius:BorderRadius.circular(14)),),),Positioned(top:0,left:192.5,child:IconButton(onPressed:(){\n},),),const Positioned(top:16,left:266.5,child:Icon(IconData(61508,fontFamily:'MaterialIcons'),color:Color(4278190080),),),const Positioned(top:16,left:305.5,child:Icon(IconData(983503,fontFamily:'MaterialIcons'),color:Color(4278190080),),),const Positioned(top:16,left:346.5,child:Icon(IconData(984460,fontFamily:'MaterialIcons'),color:Color(4278190080),),),const Positioned(top:57,left:266.5,child:Icon(IconData(983503,fontFamily:'MaterialIcons'),color:Color(4278190080),),),const Positioned(top:57,left:305.5,child:Icon(IconData(983503,fontFamily:'MaterialIcons'),color:Color(4278190080),),),const Positioned(top:57,left:346.5,child:Icon(IconData(984426,fontFamily:'MaterialIcons'),color:Color(4278190080),applyTextScaling:false,fill:1,),),Positioned(top:0,left:217.5,width:38,height:36,child:Container(decoration:BoxDecoration(color:const Color(4291085508),borderRadius:BorderRadius.circular(100),image:DecorationImage(fit:BoxFit.cover,image:const AssetImage('assets/DALL·E 2024-07-12 12.42.02 - Create a simple round icon featuring a \\'reading eye\\' symbol in a blueish-grey color scheme. The design should be clean and minimalist, with the symbol (1).png')),),),),Positioned(top:66,left:218.5,width:36,height:32,child:Container(decoration:BoxDecoration(color:const Color(4291085508),borderRadius:BorderRadius.circular(100),image:DecorationImage(fit:BoxFit.cover,image:const AssetImage('assets/DALL·E 2024-07-12 12.43.48 - Create a simple round icon representing listening to a story in a blueish-grey color scheme. The design should be clean and minimalist, incorporating .png')),),),)],),)],)"
         },
         {
             "x": 4511,
-            "y": -728,
-            "w": 226,
-            "h": 92,
+            "y": -796,
+            "w": 401,
+            "h": 125,
             "widget": "const component()",
             "deps": [
                 "lib/component.dart"
             ]
         },
         {
-            "x": 4365,
-            "y": -936,
-            "w": 388,
-            "h": 83,
-            "widget": "const tekkiContainer2()",
+            "x": 5431,
+            "y": -783.5,
+            "w": 386,
+            "h": 100,
+            "widget": "const StoryElement()",
             "deps": [
-                "lib/tekkiContainer2.dart"
+                "lib/story_element.dart"
             ]
+        },
+        {
+            "x": -1910,
+            "y": -1037,
+            "w": 393,
+            "h": 719,
+            "widget": "const text_output_auth_screen()",
+            "deps": [
+                "lib/text_output_auth_screen.dart"
+            ]
+        },
+        {
+            "x": -1413,
+            "y": -1335,
+            "w": 393,
+            "h": 808,
+            "widget": "const story_detail()",
+            "deps": [
+                "lib/story_detail.dart"
+            ]
+        },
+        {
+            "x": -3517,
+            "y": -154,
+            "h": 94,
+            "widget": "Container(decoration:BoxDecoration(color:const Color(4291085508),borderRadius:BorderRadius.circular(0)),child:Stack(alignment:const Alignment(0,0),children:[Positioned(top:10,left:16,child:GestureDetector(child:IconButton(onPressed:(){\n  BackendCollection().feedback(story_id:story_output.of(context,listen:false).story_id).then((value){\n  showDialog(builder:(context)=> const AlertDialog(title:Text('Liked',),),useRootNavigator:false,context:context,anchorPoint:const Offset(0,0),).then((value){\n},onError:(error){\n  print('error: ${error}');\n});\n},onError:(error){\n  print('error: ${error}');\n});\n},icon:GestureDetector(child:const Icon(IconData(58971,fontFamily:'MaterialIcons'),color:Color(4278190080),),),),onTap:(){\n},),),Positioned(top:10,left:91,height:40,child:CustomButton(onPressed:(){\n  regenerate_progess = 'Wait';\n  setState((){\n});\n  BackendCollection().CreateStoriesByLoggedInUser(jwt_api_token:login_response.of(context,listen:false).access_token,time_period:story_input.of(context,listen:false).time_period_input,character:story_input.of(context,listen:false).character_input,writing_style:story_input.of(context,listen:false).writing_style_input,).then((value){\n  regenerate_progess = 'Regenerate';\n  setState((){\n});\n  story_output.of(context,listen:false).story_text_output = value?.storyText;\n  Navigator.of(context).push(MaterialPageRoute(builder:(context)=> const text_output_auth_screen()));\n},onError:(error){\n  regenerate_progess = 'Regenerate';\n  setState((){\n});\n  print('error: ${error}');\n});\n},child:Text(regenerate_progess,style:const TextStyle(),),),),Positioned(top:10,left:258,height:40,child:CustomButton(onPressed:(){\n  Navigator.of(context).push(MaterialPageRoute(builder:(context)=> const text_time_period_authenticate_screen()));\n},child:const Text('New Story',style:TextStyle(),),),)],),)",
+            "deps": [
+                "lib/api/BackendCollection.api.dart",
+                "lib/story_output.dart",
+                "lib/login_response.dart",
+                "lib/story_input.dart",
+                "lib/models/create_stories_by_logged_in_user_model1.dart",
+                "lib/text_output_auth_screen.dart",
+                "lib/text_time_period_authenticate_screen.dart"
+            ]
+        },
+        {
+            "x": -2747,
+            "y": -354,
+            "w": 390,
+            "h": 77,
+            "widget": "const FeedBackComponent()",
+            "deps": [
+                "lib/feed_back_component.dart"
+            ]
+        },
+        {
+            "x": 4166,
+            "y": -20,
+            "w": 353,
+            "h": 131,
+            "widget": "Container(decoration:BoxDecoration(color:const Color(4278219392),borderRadius:BorderRadius.circular(0)),child:Stack(alignment:const Alignment(0,0),children:[Positioned(top:21.5,left:26,width:73,height:79,child:Image(image:const AssetImage('assets/DALL·E 2024-07-10 19.53.29 - Create a simple round icon featuring the phrase \\'Love it\\' in a blueish-grey color scheme. The design should be clean and minimalist, with the text in .png'),fit:BoxFit.cover,),),Positioned(top:22.5,left:154.5,width:84,height:79,child:Image(image:const AssetImage('assets/DALL·E 2024-07-10 19.54.28 - Create a simple round icon featuring the phrase \\'Do it again\\' in a blueish-grey color scheme. The design should be clean and minimalist, with the text.png'),fit:BoxFit.cover,),),Positioned(top:22.5,left:285,width:70,height:79,child:Image(image:const AssetImage('assets/DALL·E 2024-07-10 20.06.46 - Create a simple round icon featuring the phrase \\'New Story\\' in a blueish-grey color scheme. The design should be clean and minimalist, with the text i.png'),fit:BoxFit.cover,),)],),)"
+        },
+        {
+            "x": 3171,
+            "y": -1318,
+            "w": 393,
+            "h": 56,
+            "widget": "AppBar(title:const Back(),backgroundColor:const Color(4294967295),)",
+            "deps": [
+                "lib/back.dart"
+            ]
+        },
+        {
+            "x": 6134,
+            "y": -2664,
+            "widget": "Image(image:const AssetImage('assets/pasted_image_-nMoXK.png'),fit:BoxFit.cover,)"
         }
     ]
 }

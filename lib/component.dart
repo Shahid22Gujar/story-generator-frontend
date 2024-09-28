@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nowa_runtime/nowa_runtime.dart';
 
-@NowaGenerated({'auto-width': 226, 'auto-height': 92})
+@NowaGenerated({'auto-width': 401, 'auto-height': 125})
 class component extends StatelessWidget {
   @NowaGenerated({'loader': 'auto-constructor'})
   const component({this.storyParam = '', super.key});

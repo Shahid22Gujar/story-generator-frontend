@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nowa_runtime/nowa_runtime.dart';
-import 'package:mvp/api/BackendCollection.api.dart';
 import 'package:mvp/story_input.dart';
+import 'package:mvp/api/BackendCollection.api.dart';
 import 'package:mvp/story_output.dart';
 import 'package:mvp/text_output_screen.dart';
 
@@ -18,6 +18,8 @@ class text_writing_style_screen extends StatefulWidget {
 
 @NowaGenerated()
 class _text_writing_style_screenState extends State<text_writing_style_screen> {
+  bool? story_loader = false;
+
   TextEditingController writing_style_text_input = TextEditingController();
 
   @override
@@ -45,11 +47,15 @@ class _text_writing_style_screenState extends State<text_writing_style_screen> {
             ),
             Positioned(
               top: 358,
-              left: 90,
+              left: 45,
               height: 57,
-              width: 210,
+              width: 275,
               child: CustomButton(
                 onPressed: () {
+                  story_loader = true;
+                  setState(() {});
+                  story_input.of(context, listen: false).writing_style_input =
+                      writing_style_text_input.text;
                   BackendCollection()
                       .CreateStoriesByGuestUser(
                     writing_style: writing_style_text_input.text,
@@ -60,12 +66,18 @@ class _text_writing_style_screenState extends State<text_writing_style_screen> {
                         story_input.of(context, listen: false).character_input,
                   )
                       .then((value) {
+                    story_loader = false;
+                    setState(() {});
                     story_output.of(context, listen: false).story_text_output =
                         '${value?.storyText}';
+                    story_output.of(context, listen: false).story_id =
+                        value?.id;
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => const text_output_screen()));
                   }, onError: (error) {
                     print('error: ${error}');
+                    story_loader = false;
+                    setState(() {});
                   });
                 },
                 child: Text(
@@ -126,11 +138,58 @@ class _text_writing_style_screenState extends State<text_writing_style_screen> {
               child: TextFormField(
                 controller: writing_style_text_input,
               ),
+            ),
+            const Positioned(
+              top: 368.5,
+              left: 152,
+              child: Visibility(
+                visible: false,
+                child: CircularProgressIndicator(
+                  color: Color(4293252565),
+                ),
+              ),
+            ),
+            const Positioned(
+              top: 368.5,
+              left: 164.5,
+              child: Visibility(
+                visible: false,
+                child: CircularProgressIndicator(
+                  backgroundColor: Color(4293252308),
+                ),
+              ),
+            ),
+            const Positioned(
+              top: 368.5,
+              left: 177,
+              child: Visibility(
+                visible: false,
+                child: CircularProgressIndicator(
+                  color: Color(4293319643),
+                ),
+              ),
+            ),
+            Positioned(
+              top: 368.5,
+              left: 164.5,
+              child: Visibility(
+                visible: story_loader!,
+                child: const CircularProgressIndicator(
+                  backgroundColor: Color(4292199877),
+                ),
+              ),
             )
           ],
         ),
       ),
       backgroundColor: const Color(4294967295),
+      appBar: AppBar(
+        title: const Text(
+          'Back',
+          style: TextStyle(),
+        ),
+        backgroundColor: const Color(4294967295),
+      ),
     );
   }
 }

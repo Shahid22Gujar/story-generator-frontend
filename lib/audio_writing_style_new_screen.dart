@@ -3,7 +3,7 @@ import 'package:nowa_runtime/nowa_runtime.dart';
 import 'package:mvp/api/BackendCollection.api.dart';
 import 'package:mvp/story_input.dart';
 import 'package:mvp/story_output.dart';
-import 'package:mvp/StoryAudioPlayerScreen.dart';
+import 'package:mvp/story_audio_player_screen.dart';
 
 @NowaGenerated({'auto-width': 393, 'auto-height': 808})
 class audio_writing_style_new_screen extends StatefulWidget {
@@ -20,6 +20,8 @@ class audio_writing_style_new_screen extends StatefulWidget {
 class _audio_writing_style_new_screenState
     extends State<audio_writing_style_new_screen> {
   TextEditingController audio_writing_style_input = TextEditingController();
+
+  bool? story_loader = false;
 
   @override
   Widget build(BuildContext context) {
@@ -89,26 +91,34 @@ class _audio_writing_style_new_screenState
               width: 210,
               child: CustomButton(
                 onPressed: () {
+                  story_loader = true;
+                  setState(() {});
                   BackendCollection()
                       .CreateStoriesByGuestUser(
+                    writing_style: audio_writing_style_input.text,
+                    character:
+                        story_input.of(context, listen: false).character_input,
                     time_period: story_input
                         .of(context, listen: false)
                         .time_period_input,
-                    character:
-                        story_input.of(context, listen: false).character_input,
-                    writing_style: audio_writing_style_input.text,
                   )
                       .then((value) {
+                    story_loader = false;
+                    setState(() {});
                     story_output.of(context, listen: false).story_audio_url =
                         value?.storyAudio;
+                    story_output.of(context, listen: false).story_text_output =
+                        value?.storyText;
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => const StoryAudioPlayerScreen()));
                   }, onError: (error) {
                     print('error: ${error}');
+                    story_loader = false;
+                    setState(() {});
                   });
                 },
                 child: Text(
-                  'Enter',
+                  'Generate Story',
                   style: TextStyle(
                     fontFamily: 'Abril Fatface',
                     fontWeight: FontWeight.w400,
@@ -127,6 +137,16 @@ class _audio_writing_style_new_screenState
               height: 37,
               child: TextFormField(
                 controller: audio_writing_style_input,
+              ),
+            ),
+            Positioned(
+              top: 427,
+              left: 178.5,
+              child: Visibility(
+                visible: story_loader!,
+                child: const CircularProgressIndicator(
+                  backgroundColor: Color(4293451229),
+                ),
               ),
             )
           ],

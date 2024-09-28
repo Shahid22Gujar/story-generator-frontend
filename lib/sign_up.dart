@@ -16,33 +16,29 @@ class sign_up extends StatefulWidget {
 
 @NowaGenerated()
 class _sign_upState extends State<sign_up> {
-  TextEditingController text1 = TextEditingController();
+  TextEditingController confirm_password_text = TextEditingController();
 
-  TextEditingController text2 = TextEditingController();
+  TextEditingController password_text = TextEditingController();
 
-  TextEditingController text6 = TextEditingController();
+  bool? registration_loader = false;
 
-  TextEditingController first_name = TextEditingController(text: 'first_namr');
-
-  TextEditingController email = TextEditingController();
-
-  TextEditingController new_user_last_name = TextEditingController();
-
-  TextEditingController new_user_first_name = TextEditingController();
-
-  TextEditingController text = TextEditingController();
-
-  TextEditingController text3 = TextEditingController();
-
-  TextEditingController new_user_confirm_password = TextEditingController();
-
-  TextEditingController new_user_password = TextEditingController();
-
-  TextEditingController user_last_name = TextEditingController();
+  TextEditingController new_user_email = TextEditingController();
 
   TextEditingController user_first_name = TextEditingController();
 
-  TextEditingController new_user_email = TextEditingController();
+  TextEditingController user_last_name = TextEditingController();
+
+  TextEditingController new_user_password = TextEditingController();
+
+  TextEditingController new_user_confirm_password = TextEditingController();
+
+  TextEditingController new_user_first_name = TextEditingController();
+
+  TextEditingController new_user_last_name = TextEditingController();
+
+  TextEditingController email = TextEditingController();
+
+  TextEditingController first_name = TextEditingController(text: 'first_namr');
 
   @override
   Widget build(BuildContext context) {
@@ -145,6 +141,8 @@ class _sign_upState extends State<sign_up> {
               height: 60,
               child: CustomButton(
                 onPressed: () {
+                  registration_loader = true;
+                  setState(() {});
                   BackendCollection()
                       .Register(
                     user_email: new_user_email.text,
@@ -153,9 +151,13 @@ class _sign_upState extends State<sign_up> {
                     confirm_password: new_user_confirm_password.text,
                   )
                       .then((value) {
+                    registration_loader = false;
+                    setState(() {});
                     Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => const login()));
                   }, onError: (error) {
+                    registration_loader = false;
+                    setState(() {});
                     print('error: ${error}');
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => const sign_up()));
@@ -360,7 +362,7 @@ class _sign_upState extends State<sign_up> {
                                 borderRadius: BorderRadius.circular(14),
                                 borderSide: const BorderSide(
                                     color: Color(4282157982)))),
-                        controller: text,
+                        controller: confirm_password_text,
                       ),
                     ),
                   ),
@@ -417,7 +419,7 @@ class _sign_upState extends State<sign_up> {
                                 borderRadius: BorderRadius.circular(14),
                                 borderSide: const BorderSide(
                                     color: Color(4282157982)))),
-                        controller: text3,
+                        controller: password_text,
                       ),
                     ),
                   ),
@@ -494,6 +496,16 @@ class _sign_upState extends State<sign_up> {
               child: Image(
                 image: const AssetImage('assets/pasted_image_a3-Wp1.png'),
                 fit: BoxFit.cover,
+              ),
+            ),
+            Positioned(
+              top: 744,
+              left: 177,
+              child: Visibility(
+                visible: registration_loader!,
+                child: const CircularProgressIndicator(
+                  backgroundColor: Color(4293781736),
+                ),
               ),
             )
           ],

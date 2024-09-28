@@ -17,9 +17,11 @@ class login extends StatefulWidget {
 
 @NowaGenerated()
 class _loginState extends State<login> {
-  TextEditingController user_email_controller = TextEditingController();
+  bool? login_loader = false;
 
   TextEditingController user_password_conroller = TextEditingController();
+
+  TextEditingController user_email_controller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -49,11 +51,15 @@ class _loginState extends State<login> {
               width: 210.5,
               child: CustomButton(
                 onPressed: () {
+                  login_loader = true;
+                  setState(() {});
                   BackendCollection()
                       .login(
                           user_email: user_email_controller.text,
                           user_password: user_password_conroller.text)
                       .then((value) {
+                    login_loader = false;
+                    setState(() {});
                     login_response.of(context, listen: false).access_token =
                         value?.access;
                     login_response.of(context, listen: false).refresh_token =
@@ -65,6 +71,8 @@ class _loginState extends State<login> {
                         builder: (context) => const authenticated_homepage()));
                   }, onError: (error) {
                     print('error: ${error}');
+                    login_loader = false;
+                    setState(() {});
                   });
                 },
                 child: Text(
@@ -224,7 +232,8 @@ class _loginState extends State<login> {
                 },
                 decoration: InputDecoration(
                     disabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(0))),
+                        borderRadius: BorderRadius.circular(0)),
+                    filled: false),
               ),
             ),
             const Positioned(
@@ -262,11 +271,28 @@ class _loginState extends State<login> {
                 image: const AssetImage('assets/pasted_image_a3-Wp1.png'),
                 fit: BoxFit.cover,
               ),
+            ),
+            Positioned(
+              top: 654.5,
+              left: 168.75,
+              child: Visibility(
+                visible: login_loader!,
+                child: const CircularProgressIndicator(
+                  backgroundColor: Color(4293845473),
+                ),
+              ),
             )
           ],
         ),
       ),
       backgroundColor: const Color(4294967295),
+      appBar: AppBar(
+        title: const Text(
+          'Back',
+          style: TextStyle(),
+        ),
+        backgroundColor: const Color(4294967295),
+      ),
     );
   }
 }

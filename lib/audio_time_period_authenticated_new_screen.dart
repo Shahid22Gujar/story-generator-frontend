@@ -139,7 +139,7 @@ class _audio_time_period_authenticated_new_screenState
               top: 509,
               left: 51,
               width: 274,
-              height: 35,
+              height: 36,
               child: TextFormField(
                 controller: audio_time_period_input,
               ),
@@ -148,6 +148,13 @@ class _audio_time_period_authenticated_new_screenState
         ),
       ),
       backgroundColor: const Color(4294967295),
+      appBar: AppBar(
+        title: const Text(
+          'Back',
+          style: TextStyle(),
+        ),
+        backgroundColor: const Color(4294967295),
+      ),
     );
   }
 }

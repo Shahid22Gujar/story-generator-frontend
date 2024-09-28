@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:nowa_runtime/nowa_runtime.dart';
+import 'package:mvp/story_input.dart';
 import 'package:mvp/api/BackendCollection.api.dart';
 import 'package:mvp/login_response.dart';
-import 'package:mvp/story_input.dart';
 import 'package:mvp/story_output.dart';
-import 'package:mvp/text_output_screen.dart';
+import 'package:mvp/text_output_auth_screen.dart';
 
 @NowaGenerated({'auto-width': 393, 'auto-height': 808})
 class text_writing_style_authenticated_screen extends StatefulWidget {
@@ -20,6 +20,8 @@ class text_writing_style_authenticated_screen extends StatefulWidget {
 @NowaGenerated()
 class _text_writing_style_authenticated_screenState
     extends State<text_writing_style_authenticated_screen> {
+  bool? story_loader = false;
+
   TextEditingController writing_style_authenticated_input =
       TextEditingController();
 
@@ -94,11 +96,15 @@ class _text_writing_style_authenticated_screenState
             ),
             Positioned(
               top: 375.5,
-              left: 91.5,
+              left: 83.5,
               height: 57,
-              width: 210,
+              width: 226,
               child: CustomButton(
                 onPressed: () {
+                  story_loader = true;
+                  setState(() {});
+                  story_input.of(context, listen: false).writing_style_input =
+                      writing_style_authenticated_input.text;
                   BackendCollection()
                       .CreateStoriesByLoggedInUser(
                     jwt_api_token:
@@ -113,10 +119,16 @@ class _text_writing_style_authenticated_screenState
                       .then((value) {
                     story_output.of(context, listen: false).story_text_output =
                         '${value?.storyText}';
+                    story_output.of(context, listen: false).story_id =
+                        value?.id;
+                    story_loader = false;
+                    setState(() {});
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => const text_output_screen()));
+                        builder: (context) => const text_output_auth_screen()));
                   }, onError: (error) {
                     print('error: ${error}');
+                    story_loader = false;
+                    setState(() {});
                   });
                 },
                 child: Text(
@@ -131,11 +143,28 @@ class _text_writing_style_authenticated_screenState
                 ),
                 color: const Color(4278219392),
               ),
+            ),
+            Positioned(
+              top: 386,
+              left: 178.5,
+              child: Visibility(
+                visible: story_loader!,
+                child: const CircularProgressIndicator(
+                  backgroundColor: Color(4294174695),
+                ),
+              ),
             )
           ],
         ),
       ),
       backgroundColor: const Color(4294967295),
+      appBar: AppBar(
+        title: const Text(
+          'Back',
+          style: TextStyle(),
+        ),
+        backgroundColor: const Color(4294967295),
+      ),
     );
   }
 }

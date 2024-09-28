@@ -80,6 +80,12 @@ class audio_basic_info_screen extends StatelessWidget {
           ],
         ),
       ),
+      appBar: AppBar(
+        title: const Text(
+          'Title',
+          style: TextStyle(),
+        ),
+      ),
     );
   }
 }

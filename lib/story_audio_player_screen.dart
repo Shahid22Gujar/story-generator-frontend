@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nowa_runtime/nowa_runtime.dart';
 import 'package:mvp/story_output.dart';
 
-@NowaGenerated({'auto-width': 393, 'auto-height': 808})
+@NowaGenerated({'auto-width': 393, 'auto-height': 853})
 class StoryAudioPlayerScreen extends StatefulWidget {
   @NowaGenerated({'loader': 'auto-constructor'})
   const StoryAudioPlayerScreen({super.key});
@@ -15,10 +15,10 @@ class StoryAudioPlayerScreen extends StatefulWidget {
 
 @NowaGenerated()
 class _StoryAudioPlayerScreenState extends State<StoryAudioPlayerScreen> {
-  CrossFadeState? fadeState = CrossFadeState.showFirst;
-
   AudioPlayerController? audioPC = AudioPlayerController(
       source: AudioSource(type: FileSourceType.network, path: ''));
+
+  CrossFadeState? fadeState = CrossFadeState.showFirst;
 
   @override
   Widget build(BuildContext context) {
@@ -35,12 +35,16 @@ class _StoryAudioPlayerScreenState extends State<StoryAudioPlayerScreen> {
             alignment: const Alignment(0, 0),
             children: [
               Positioned(
+                left: 0,
+                right: 0,
+                top: 0,
+                bottom: 48,
                 child: NotifierBuilder(
                   builder: (context) => ListView(
                     children: [
                       SizedBox(
                         width: 370,
-                        height: 340,
+                        height: 363,
                         child: Padding(
                           padding: const EdgeInsets.only(
                             left: 14,
@@ -333,10 +337,6 @@ class _StoryAudioPlayerScreenState extends State<StoryAudioPlayerScreen> {
                   ),
                   notifier: audioPC,
                 ),
-                left: 0,
-                right: 0,
-                top: 0,
-                bottom: 0,
               )
             ],
           ),
@@ -345,7 +345,7 @@ class _StoryAudioPlayerScreenState extends State<StoryAudioPlayerScreen> {
       backgroundColor: const Color(4280097842),
       appBar: AppBar(
         title: Text(
-          'NOW PLAYING',
+          'Back',
           style: TextStyle(
             fontFamily: 'Alexandria',
             fontWeight: FontWeight.w900,

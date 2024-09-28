@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:nowa_runtime/nowa_runtime.dart';
 import 'package:mvp/models/liststories_model.dart';
-import 'package:mvp/storyComponent.dart';
+import 'package:mvp/story_output.dart';
+import 'package:mvp/story_audio_player_screen.dart';
+import 'package:mvp/story_detail.dart';
 import 'package:mvp/api/BackendCollection.api.dart';
 import 'package:mvp/login_response.dart';
 
@@ -32,17 +34,49 @@ class _my_stories_generated_screenState
                 width: double.infinity,
                 flex: 1,
                 child: ListView.separated(
-                  itemCount: 5,
-                  itemBuilder: (context, index) => const storyComponent(),
+                  itemCount: data!.length,
+                  itemBuilder: (context, index) {
+                    final ListStoriesModel? element = data?[index];
+                    return GestureDetector(
+                      child: Container(
+                        height: 100,
+                        width: 100,
+                        decoration: BoxDecoration(
+                          color: const Color(4282157982),
+                          border: const Border(
+                              bottom: BorderSide(
+                                  color: Color(4291085508), width: 1)),
+                          borderRadius: BorderRadius.circular(0),
+                        ),
+                        child: Center(
+                          child: Text(
+                            element!.storyText!,
+                            style: const TextStyle(
+                                color: Color(4292793042), fontSize: 20),
+                          ),
+                        ),
+                      ),
+                      onTap: () {
+                        story_output
+                            .of(context, listen: false)
+                            .story_text_output = element?.storyText;
+                        story_output
+                            .of(context, listen: false)
+                            .story_audio_url = element?.storyAudio;
+                        if (element!.storyAudio!) {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) =>
+                                  const StoryAudioPlayerScreen()));
+                        } else {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const story_detail()));
+                        }
+                      },
+                    );
+                  },
                   separatorBuilder: (context, index) => const SizedBox(
                     height: 25,
                     width: 20,
-                  ),
-                  padding: const EdgeInsets.only(
-                    left: 10,
-                    right: 10,
-                    top: 10,
-                    bottom: 10,
                   ),
                 ),
               )
