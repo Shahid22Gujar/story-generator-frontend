@@ -1,4 +1,4 @@
-package com.example.mvp
+package com.example.storymvp
 
 import io.flutter.embedding.android.FlutterActivity
 

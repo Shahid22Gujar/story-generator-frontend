@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nowa_runtime/nowa_runtime.dart';
 import 'package:mvp/story_input.dart';
-import 'package:mvp/audio_time_period_new_screen.dart';
+import 'package:mvp/audio_time_period_new_screen2.dart';
 
 @NowaGenerated({'auto-width': 414, 'auto-height': 825})
 class audio_basic_info_new_screen extends StatefulWidget {
@@ -70,7 +70,7 @@ class _audio_basic_info_new_screenState
                       audio_genre_input.text;
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) =>
-                          const audio_time_period_new_screen()));
+                          const audio_time_period_new_screen2()));
                 },
                 child: Text(
                   'Enter',

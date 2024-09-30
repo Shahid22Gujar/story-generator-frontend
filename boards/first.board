@@ -372,13 +372,6 @@
             ]
         },
         {
-            "x": 1955,
-            "y": -1262,
-            "w": 393,
-            "h": 808,
-            "widget": "audio_time_period_new_screen()!"
-        },
-        {
             "x": 2480,
             "y": -1226,
             "w": 452,
@@ -551,6 +544,16 @@
             "x": 6134,
             "y": -2664,
             "widget": "Image(image:const AssetImage('assets/pasted_image_-nMoXK.png'),fit:BoxFit.cover,)"
+        },
+        {
+            "x": 1413.5,
+            "y": -1262,
+            "w": 393,
+            "h": 808,
+            "widget": "const audio_time_period_new_screen2()",
+            "deps": [
+                "lib/audio_time_period_new_screen2.dart"
+            ]
         }
     ]
 }
