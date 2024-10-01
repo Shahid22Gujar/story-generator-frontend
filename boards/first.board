@@ -540,6 +540,13 @@
             "deps": [
                 "lib/audio_time_period_new_screen2.dart"
             ]
+        },
+        {
+            "x": -120,
+            "y": -667,
+            "w": 100,
+            "h": 100,
+            "widget": "Container(decoration:BoxDecoration(color:Color(0xffc4c4c4),borderRadius:BorderRadius.circular(0)),)"
         }
     ]
 }
