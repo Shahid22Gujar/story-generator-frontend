@@ -308,20 +308,6 @@
             ]
         },
         {
-            "x": -6674,
-            "y": -2295,
-            "w": 390,
-            "h": 844,
-            "widget": "Stack(alignment:const Alignment(0,0),children:[Positioned(top:0,left:0,width:390,height:844,child:NFlex(direction:Axis.vertical,spacing:0,children:[FlexSizedBox(width:390,height:844,child:mvp0()!,)],mainAxisSize:MainAxisSize.min,mainAxisAlignment:MainAxisAlignment.start,),)],)"
-        },
-        {
-            "x": -332,
-            "y": -3439,
-            "w": 393,
-            "h": 834,
-            "widget": "audioPlayerPage()!"
-        },
-        {
             "x": -4365.5,
             "y": -1330,
             "w": 393,
