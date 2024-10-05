@@ -27,8 +27,8 @@ class _homepageState extends State<homepage> {
           alignment: const Alignment(0, 0),
           children: [
             Positioned(
-              top: 277,
-              left: 39,
+              top: 196,
+              left: 37,
               width: 391,
               height: 83,
               child: Text(
@@ -43,7 +43,7 @@ class _homepageState extends State<homepage> {
               ),
             ),
             Positioned(
-              top: 334,
+              top: 279,
               left: 0,
               width: 390,
               height: 111,
@@ -58,10 +58,10 @@ class _homepageState extends State<homepage> {
               ),
             ),
             Positioned(
-              top: 461,
+              top: 389,
               left: 96,
               width: 198,
-              height: 66,
+              height: 54,
               child: CustomButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
@@ -81,7 +81,7 @@ class _homepageState extends State<homepage> {
               ),
             ),
             Positioned(
-              top: 560,
+              top: 467,
               left: 96,
               height: 55,
               width: 198,
@@ -104,8 +104,8 @@ class _homepageState extends State<homepage> {
               ),
             ),
             Positioned(
-              top: 740,
-              left: 96,
+              top: 632,
+              left: 104,
               height: 61,
               width: 198,
               child: CustomButton(
@@ -127,7 +127,7 @@ class _homepageState extends State<homepage> {
               ),
             ),
             Positioned(
-              top: 645,
+              top: 540,
               left: 93.5,
               width: 203,
               height: 60,
@@ -148,7 +148,7 @@ class _homepageState extends State<homepage> {
               ),
             ),
             Positioned(
-              top: 78,
+              top: 28,
               left: 116,
               width: 158,
               height: 168,

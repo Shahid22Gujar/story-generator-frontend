@@ -5,9 +5,9 @@ import 'package:mvp/api/BackendCollection.api.dart';
 import 'package:mvp/dynamic_asset.dart';
 import 'package:mvp/login_response.dart';
 import 'package:mvp/story_input.dart';
-import 'package:mvp/text_time_period_authenticate_screen.dart';
+import 'package:mvp/authenticated_homepage.dart';
 
-@NowaGenerated({'auto-height': 719, 'auto-width': 393})
+@NowaGenerated({'auto-height': 879, 'auto-width': 398})
 class text_output_auth_screen extends StatefulWidget {
   @NowaGenerated({'loader': 'auto-constructor'})
   const text_output_auth_screen({super.key});
@@ -45,30 +45,29 @@ class _text_output_auth_screenState extends State<text_output_auth_screen> {
             ),
             FlexSizedBox(
               width: double.infinity,
-              height: 409,
+              height: 256,
               child: SingleChildScrollView(
                 child: Text(
                   story_output.of(context).story_text_output!,
                   style: const TextStyle(),
-                  textAlign: TextAlign.start,
+                  textAlign: TextAlign.justify,
                 ),
               ),
             ),
             FlexSizedBox(
-              width: 393,
-              height: 124,
+              width: 405,
+              height: 223,
               child: Container(
                 decoration: BoxDecoration(
                     color: const Color(4278219392),
                     borderRadius: BorderRadius.circular(0)),
-                child: Stack(
-                  alignment: const Alignment(0, 0),
+                child: NFlex(
+                  direction: Axis.horizontal,
+                  spacing: 0,
                   children: [
-                    Positioned(
-                      top: 21.5,
-                      left: 26,
-                      width: 73,
-                      height: 79,
+                    FlexSizedBox(
+                      width: 131,
+                      height: 137,
                       child: GestureDetector(
                         child: Image(
                           image: const AssetImage(
@@ -100,11 +99,9 @@ class _text_output_auth_screenState extends State<text_output_auth_screen> {
                         },
                       ),
                     ),
-                    Positioned(
-                      top: 22.5,
-                      left: 154.5,
-                      width: 84,
-                      height: 79,
+                    FlexSizedBox(
+                      width: 120,
+                      height: 137,
                       child: GestureDetector(
                         child: Image(
                           image: NetworkImage(regenerate_progress!),
@@ -130,6 +127,9 @@ class _text_output_auth_screenState extends State<text_output_auth_screen> {
                                 .of(context, listen: false)
                                 .writing_style_input,
                             is_regenerate: true,
+                            story_genre: story_input
+                                .of(context, listen: false)
+                                .story_genre,
                           )
                               .then((value) {
                             regenerate_progress =
@@ -154,11 +154,9 @@ class _text_output_auth_screenState extends State<text_output_auth_screen> {
                         },
                       ),
                     ),
-                    Positioned(
-                      top: 22.5,
-                      left: 285,
-                      width: 70,
-                      height: 79,
+                    FlexSizedBox(
+                      width: 131,
+                      height: 137,
                       child: GestureDetector(
                         child: Image(
                           image: const AssetImage(
@@ -168,11 +166,13 @@ class _text_output_auth_screenState extends State<text_output_auth_screen> {
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) =>
-                                  const text_time_period_authenticate_screen()));
+                                  const authenticated_homepage()));
                         },
                       ),
                     )
                   ],
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
                 ),
               ),
             )

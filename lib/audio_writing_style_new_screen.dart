@@ -4,6 +4,7 @@ import 'package:mvp/api/BackendCollection.api.dart';
 import 'package:mvp/story_input.dart';
 import 'package:mvp/story_output.dart';
 import 'package:mvp/story_audio_player_screen.dart';
+import 'package:mvp/back.dart';
 
 @NowaGenerated({'auto-width': 393, 'auto-height': 808})
 class audio_writing_style_new_screen extends StatefulWidget {
@@ -19,9 +20,9 @@ class audio_writing_style_new_screen extends StatefulWidget {
 @NowaGenerated()
 class _audio_writing_style_new_screenState
     extends State<audio_writing_style_new_screen> {
-  TextEditingController audio_writing_style_input = TextEditingController();
-
   bool? story_loader = false;
+
+  TextEditingController audio_writing_style_input = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +33,12 @@ class _audio_writing_style_new_screenState
           alignment: const Alignment(0, 0),
           children: [
             Positioned(
-              top: 64,
-              left: 1.5,
-              width: 390,
-              height: 198,
+              top: 34,
+              left: 24.5,
+              width: 333.5,
+              height: 199,
               child: Text(
-                'Finally, let\'s define the writing style.\nIs there a famous writer whose style\nyou\'d like your story to emulate? Choose \nfreely your favourite author, just name him \not them.\n',
+                'Finally, let\'s define the writing style.\nIs there a famous writer whose style\nyou\'d like your story to emulate? Choose \nfreely your favourite author, just name him \not them. Like Sonnet\n',
                 style: TextStyle(
                   fontFamily: 'Fraunces',
                   fontWeight: FontWeight.w700,
@@ -85,7 +86,7 @@ class _audio_writing_style_new_screenState
               ),
             ),
             Positioned(
-              top: 421,
+              top: 370,
               left: 91.5,
               height: 48,
               width: 210,
@@ -153,6 +154,10 @@ class _audio_writing_style_new_screenState
         ),
       ),
       backgroundColor: const Color(4294967295),
+      appBar: AppBar(
+        title: const Back(),
+        backgroundColor: const Color(4294967295),
+      ),
     );
   }
 }

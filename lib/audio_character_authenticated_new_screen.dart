@@ -45,9 +45,9 @@ class _audio_character_authenticated_new_screenState
             ),
             Positioned(
               top: 162,
-              left: 1,
-              width: 391,
-              height: 167,
+              left: 20.5,
+              width: 371.5,
+              height: 151,
               child: Text(
                 'Who would uou like to be part of it? Like\n\'\'a man\', \'a woman\', \'a man like Tom\', \'two\nteenage girl\', \'a rabbit and a unicorn \nfeel free to choose.',
                 style: TextStyle(
@@ -106,7 +106,7 @@ class _audio_character_authenticated_new_screenState
               ),
             ),
             Positioned(
-              top: 507,
+              top: 471,
               left: 91.5,
               height: 57,
               width: 210,

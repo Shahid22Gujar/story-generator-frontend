@@ -26,7 +26,7 @@ class _authenticated_homepageState extends State<authenticated_homepage> {
           alignment: const Alignment(0, 0),
           children: [
             Positioned(
-              top: 277,
+              top: 242,
               left: 39,
               width: 391,
               height: 83,
@@ -41,7 +41,7 @@ class _authenticated_homepageState extends State<authenticated_homepage> {
               ),
             ),
             Positioned(
-              top: 334,
+              top: 310,
               left: 0,
               width: 390,
               height: 111,
@@ -56,7 +56,7 @@ class _authenticated_homepageState extends State<authenticated_homepage> {
               ),
             ),
             Positioned(
-              top: 492,
+              top: 445,
               left: 96,
               width: 198,
               height: 66,
@@ -79,7 +79,7 @@ class _authenticated_homepageState extends State<authenticated_homepage> {
               ),
             ),
             Positioned(
-              top: 601,
+              top: 531,
               left: 96,
               height: 55,
               width: 198,
@@ -102,7 +102,7 @@ class _authenticated_homepageState extends State<authenticated_homepage> {
               ),
             ),
             Positioned(
-              top: 703,
+              top: 614,
               left: 96,
               height: 61,
               width: 198,
@@ -124,13 +124,13 @@ class _authenticated_homepageState extends State<authenticated_homepage> {
                 color: const Color(4282157982),
               ),
             ),
-            const Positioned(
-              top: 66,
+            Positioned(
+              top: 52,
               left: 116,
               width: 158,
               height: 168,
               child: Image(
-                image: AssetImage('assets/pasted_image_a3-Wp1.png'),
+                image: const AssetImage('assets/pasted_image_a3-Wp1.png'),
                 fit: BoxFit.cover,
               ),
             )
@@ -138,6 +138,13 @@ class _authenticated_homepageState extends State<authenticated_homepage> {
         ),
       ),
       backgroundColor: const Color(4294967295),
+      appBar: AppBar(
+        title: const Text(
+          'Back',
+          style: TextStyle(),
+        ),
+        actions: [],
+      ),
     );
   }
 }

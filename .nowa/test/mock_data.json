@@ -237,6 +237,27 @@
                     }
                 }
             }
+        },
+        "https://sgujar.pythonanywhere.com/accounts/register/": {
+            "post": {
+                "collection": "BackendCollection",
+                "operationId": "Register",
+                "summary": "Nowa Auto Generated",
+                "description": "",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                },
+                                "value": null
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

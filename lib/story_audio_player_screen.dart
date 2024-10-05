@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nowa_runtime/nowa_runtime.dart';
 import 'package:mvp/story_output.dart';
 
-@NowaGenerated({'auto-width': 393, 'auto-height': 853})
+@NowaGenerated({'auto-width': 390, 'auto-height': 844})
 class StoryAudioPlayerScreen extends StatefulWidget {
   @NowaGenerated({'loader': 'auto-constructor'})
   const StoryAudioPlayerScreen({super.key});
@@ -15,10 +15,10 @@ class StoryAudioPlayerScreen extends StatefulWidget {
 
 @NowaGenerated()
 class _StoryAudioPlayerScreenState extends State<StoryAudioPlayerScreen> {
+  CrossFadeState? fadeState = CrossFadeState.showFirst;
+
   AudioPlayerController? audioPC = AudioPlayerController(
       source: AudioSource(type: FileSourceType.network, path: ''));
-
-  CrossFadeState? fadeState = CrossFadeState.showFirst;
 
   @override
   Widget build(BuildContext context) {
@@ -37,14 +37,14 @@ class _StoryAudioPlayerScreenState extends State<StoryAudioPlayerScreen> {
               Positioned(
                 left: 0,
                 right: 0,
-                top: 0,
-                bottom: 48,
+                top: 24,
+                bottom: 24,
                 child: NotifierBuilder(
                   builder: (context) => ListView(
                     children: [
                       SizedBox(
                         width: 370,
-                        height: 363,
+                        height: 273,
                         child: Padding(
                           padding: const EdgeInsets.only(
                             left: 14,

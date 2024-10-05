@@ -17,7 +17,8 @@ class audio_basic_info_authenticated_screen extends StatefulWidget {
 @NowaGenerated()
 class _audio_basic_info_authenticated_screenState
     extends State<audio_basic_info_authenticated_screen> {
-  TextEditingController audio_genre_input = TextEditingController();
+  TextEditingController audio_genre_input =
+      TextEditingController(text: 'romantic');
 
   @override
   Widget build(BuildContext context) {
@@ -30,8 +31,8 @@ class _audio_basic_info_authenticated_screenState
             Positioned(
               top: 68,
               left: 25,
-              width: 400,
-              height: 136,
+              width: 389.5,
+              height: 108,
               child: Text(
                 'Please provide some basic information,\nand we\'ll get started immediately.',
                 style: TextStyle(
@@ -47,7 +48,7 @@ class _audio_basic_info_authenticated_screenState
               top: 204,
               left: 35.5,
               width: 379,
-              height: 219,
+              height: 184,
               child: Text(
                 'First, tell me what the genre of your story\nshould be, like \'romance\', \'thriler\', \n\'detective story\', \'love story\', \'science fiction\', \n\'future\', and so on.',
                 style: TextStyle(
@@ -97,8 +98,8 @@ class _audio_basic_info_authenticated_screenState
               ),
             ),
             Positioned(
-              top: 596,
-              left: 120,
+              top: 543,
+              left: 109,
               height: 57,
               width: 210,
               child: CustomButton(

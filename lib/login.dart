@@ -32,8 +32,8 @@ class _loginState extends State<login> {
           alignment: const Alignment(0, 0),
           children: [
             Positioned(
-              top: 303,
-              left: 81.5,
+              top: 277,
+              left: 80.5,
               child: Text(
                 'welcome back',
                 style: const TextStyle(
@@ -45,8 +45,8 @@ class _loginState extends State<login> {
               ),
             ),
             Positioned(
-              top: 648,
-              left: 81.5,
+              top: 559,
+              left: 89.5,
               height: 49,
               width: 210.5,
               child: CustomButton(
@@ -89,10 +89,10 @@ class _loginState extends State<login> {
               ),
             ),
             Positioned(
-              top: 408,
-              left: 51,
-              width: 268.9855651855469,
-              height: 240,
+              top: 353,
+              left: 58.5,
+              width: 272.5,
+              height: 241,
               child: Stack(
                 fit: StackFit.expand,
                 alignment: const Alignment(0, 0),
@@ -203,24 +203,21 @@ class _loginState extends State<login> {
               ),
             ),
             const Positioned(
-              top: 443,
-              left: 57.5,
+              top: 387,
+              left: 62.5,
               child: Icon(
                 IconData(62074, fontFamily: 'MaterialIcons'),
                 color: Color(4278219392),
               ),
             ),
             Positioned(
-              top: 556,
-              left: 83,
-              width: 223.5,
-              height: 38,
+              top: 503,
+              left: 94,
+              width: 215.98556518554688,
+              height: 36,
               child: TextFormField(
                 controller: user_password_conroller,
-                onTap: () {},
-                onChanged: (value) {},
-                onEditingComplete: () {},
-                onFieldSubmitted: (value) {},
+                onFieldSubmitted: null,
                 validator: (value) {
                   if (value == null || value!.isEmpty) {
                     return 'Field is required';
@@ -237,18 +234,18 @@ class _loginState extends State<login> {
               ),
             ),
             const Positioned(
-              top: 558,
-              left: 57.5,
+              top: 509,
+              left: 61.5,
               child: Icon(
                 IconData(984363, fontFamily: 'MaterialIcons'),
                 color: Color(4282157982),
               ),
             ),
             Positioned(
-              top: 436.5,
-              left: 90,
-              width: 215,
-              height: 37,
+              top: 380,
+              left: 107,
+              width: 202.98556518554688,
+              height: 38,
               child: TextFormField(
                 controller: user_email_controller,
                 validator: (value) {
@@ -260,6 +257,9 @@ class _loginState extends State<login> {
                   }
                   return null;
                 },
+                cursorWidth: 2,
+                maxLines: 1,
+                autofocus: false,
               ),
             ),
             Positioned(
@@ -273,8 +273,8 @@ class _loginState extends State<login> {
               ),
             ),
             Positioned(
-              top: 654.5,
-              left: 168.75,
+              top: 566.5,
+              left: 176.75,
               child: Visibility(
                 visible: login_loader!,
                 child: const CircularProgressIndicator(

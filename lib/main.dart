@@ -17,6 +17,7 @@ import 'package:mvp/audio_output_save_screen.dart';
 import 'package:mvp/audio_output_screen.dart';
 import 'package:mvp/audio_screen.dart';
 import 'package:mvp/audio_time_period_authenticated_new_screen.dart';
+import 'package:mvp/audio_time_period_new_screen2.dart';
 import 'package:mvp/audio_time_period_screen.dart';
 import 'package:mvp/audio_writing_style_authenticated_new_screen.dart';
 import 'package:mvp/audio_writing_style_new_screen.dart';
@@ -130,6 +131,8 @@ class MyApp extends StatelessWidget {
                 'audio_screen': (context) => const audio_screen(),
                 'audio_time_period_authenticated_new_screen': (context) =>
                     const audio_time_period_authenticated_new_screen(),
+                'audio_time_period_new_screen2': (context) =>
+                    const audio_time_period_new_screen2(),
                 'audio_time_period_screen': (context) =>
                     const audio_time_period_screen(),
                 'audio_writing_style_authenticated_new_screen': (context) =>

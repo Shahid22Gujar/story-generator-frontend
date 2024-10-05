@@ -28,10 +28,10 @@ class _audio_character_new_screenState
           alignment: const Alignment(0, 0),
           children: [
             Positioned(
-              top: 78,
-              left: 20.5,
-              width: 352,
-              height: 85,
+              top: 54,
+              left: 25,
+              width: 373,
+              height: 72,
               child: Text(
                 'Next, let\'s define the characters for \nyour story.',
                 style: TextStyle(
@@ -44,10 +44,10 @@ class _audio_character_new_screenState
               ),
             ),
             Positioned(
-              top: 225,
-              left: 1,
-              width: 391,
-              height: 167,
+              top: 160,
+              left: 41.25,
+              width: 304.5,
+              height: 176,
               child: Text(
                 'Who would uou like to be part of it? Like\n\'\'a man\', \'a woman\', \'a man like Tom\', \'two\nteenage girl\', \'a rabbit and a unicorn \nfeel free to choose.',
                 style: TextStyle(
@@ -60,7 +60,7 @@ class _audio_character_new_screenState
               ),
             ),
             Positioned(
-              top: 392,
+              top: 358,
               left: 54,
               width: 344,
               height: 100,
@@ -97,8 +97,8 @@ class _audio_character_new_screenState
               ),
             ),
             Positioned(
-              top: 426,
-              left: 68,
+              top: 391,
+              left: 76,
               width: 257,
               height: 32,
               child: TextFormField(
@@ -106,7 +106,7 @@ class _audio_character_new_screenState
               ),
             ),
             Positioned(
-              top: 526,
+              top: 471,
               left: 121,
               height: 57,
               width: 210,

@@ -18,9 +18,9 @@ class text_writing_style_screen extends StatefulWidget {
 
 @NowaGenerated()
 class _text_writing_style_screenState extends State<text_writing_style_screen> {
-  bool? story_loader = false;
-
   TextEditingController writing_style_text_input = TextEditingController();
+
+  bool? story_loader = false;
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +34,9 @@ class _text_writing_style_screenState extends State<text_writing_style_screen> {
               top: 75,
               left: 23,
               width: 344,
-              height: 126,
+              height: 243,
               child: Text(
-                'Finally, let\'s define the writing style Is there a famous writer whose style you\'d like your story to emulate?',
+                'Finally, let\'s define the writing style.\nIs there a famous writer whose style\nyou\'d like your story to emulate? Choose \nfreely your favourite author, just name him \not them. Like Sonnet\n',
                 style: const TextStyle(
                   fontFamily: 'Abril Fatface',
                   color: Color(4278219392),
@@ -46,10 +46,10 @@ class _text_writing_style_screenState extends State<text_writing_style_screen> {
               ),
             ),
             Positioned(
-              top: 358,
+              top: 505,
               left: 45,
               height: 57,
-              width: 275,
+              width: 251,
               child: CustomButton(
                 onPressed: () {
                   story_loader = true;
@@ -64,6 +64,8 @@ class _text_writing_style_screenState extends State<text_writing_style_screen> {
                         .time_period_input,
                     character:
                         story_input.of(context, listen: false).character_input,
+                    story_genre:
+                        story_input.of(context, listen: false).story_genre,
                   )
                       .then((value) {
                     story_loader = false;
@@ -94,7 +96,7 @@ class _text_writing_style_screenState extends State<text_writing_style_screen> {
               ),
             ),
             Positioned(
-              top: 201,
+              top: 363,
               left: 23,
               width: 344,
               height: 109,
@@ -131,7 +133,7 @@ class _text_writing_style_screenState extends State<text_writing_style_screen> {
               ),
             ),
             Positioned(
-              top: 230,
+              top: 393,
               left: 45,
               width: 275,
               height: 37,
@@ -170,8 +172,8 @@ class _text_writing_style_screenState extends State<text_writing_style_screen> {
               ),
             ),
             Positioned(
-              top: 368.5,
-              left: 164.5,
+              top: 512.5,
+              left: 158.5,
               child: Visibility(
                 visible: story_loader!,
                 child: const CircularProgressIndicator(

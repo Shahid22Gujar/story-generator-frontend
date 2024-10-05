@@ -31,7 +31,7 @@ class _audio_time_period_new_screen2State
               top: 59,
               left: 23,
               width: 347,
-              height: 154,
+              height: 122,
               child: Text(
                 'Now, let\'s define the time period for your story.',
                 style: TextStyle(
@@ -44,12 +44,12 @@ class _audio_time_period_new_screen2State
               ),
             ),
             Positioned(
-              top: 275.5,
-              left: 6.5,
-              width: 380,
-              height: 201,
+              top: 181,
+              left: 22.5,
+              width: 347.5,
+              height: 161,
               child: Text(
-                'When would you like it to take place?\nLike \'today\', \'near future\', \'medieval\ntimes\' ot name a specific year or a rime period.',
+                'When would you like it to take place?\nLike \'today\', \'near future\', \'medieval\ntimes\' ot name a specific year or a time period.',
                 style: TextStyle(
                   fontFamily: 'Fraunces',
                   fontWeight: FontWeight.w700,
@@ -60,7 +60,7 @@ class _audio_time_period_new_screen2State
               ),
             ),
             Positioned(
-              top: 476.5,
+              top: 415.5,
               left: 24.5,
               width: 344,
               height: 129.5,
@@ -110,8 +110,8 @@ class _audio_time_period_new_screen2State
               ),
             ),
             Positioned(
-              top: 581,
-              left: 91.5,
+              top: 541,
+              left: 79.5,
               height: 57,
               width: 210,
               child: CustomButton(
@@ -136,8 +136,8 @@ class _audio_time_period_new_screen2State
               ),
             ),
             Positioned(
-              top: 508,
-              left: 91.5,
+              top: 448,
+              left: 71.5,
               width: 229,
               height: 33,
               child: TextFormField(
@@ -152,7 +152,9 @@ class _audio_time_period_new_screen2State
           'Back',
           style: TextStyle(),
         ),
+        backgroundColor: const Color(4294967295),
       ),
+      backgroundColor: const Color(4294967295),
     );
   }
 }

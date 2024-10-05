@@ -20,10 +20,10 @@ class text_writing_style_authenticated_screen extends StatefulWidget {
 @NowaGenerated()
 class _text_writing_style_authenticated_screenState
     extends State<text_writing_style_authenticated_screen> {
-  bool? story_loader = false;
-
   TextEditingController writing_style_authenticated_input =
       TextEditingController();
+
+  bool? story_loader = false;
 
   @override
   Widget build(BuildContext context) {
@@ -34,22 +34,7 @@ class _text_writing_style_authenticated_screenState
           alignment: const Alignment(0, 0),
           children: [
             Positioned(
-              top: 48,
-              left: 24.5,
-              width: 344,
-              height: 126,
-              child: Text(
-                'Finally, let\'s define the writing style Is there a famous writer whose style you\'d like your story to emulate?',
-                style: const TextStyle(
-                  fontFamily: 'Abril Fatface',
-                  color: Color(4278219392),
-                  fontSize: 20,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Positioned(
-              top: 211,
+              top: 377,
               left: 24.5,
               width: 344,
               height: 109,
@@ -86,7 +71,7 @@ class _text_writing_style_authenticated_screenState
               ),
             ),
             Positioned(
-              top: 246,
+              top: 412,
               left: 44,
               width: 273,
               height: 31,
@@ -95,7 +80,7 @@ class _text_writing_style_authenticated_screenState
               ),
             ),
             Positioned(
-              top: 375.5,
+              top: 511.5,
               left: 83.5,
               height: 57,
               width: 226,
@@ -115,6 +100,8 @@ class _text_writing_style_authenticated_screenState
                     character:
                         story_input.of(context, listen: false).character_input,
                     writing_style: writing_style_authenticated_input.text,
+                    story_genre:
+                        story_input.of(context, listen: false).story_genre,
                   )
                       .then((value) {
                     story_output.of(context, listen: false).story_text_output =
@@ -145,13 +132,28 @@ class _text_writing_style_authenticated_screenState
               ),
             ),
             Positioned(
-              top: 386,
+              top: 518,
               left: 178.5,
               child: Visibility(
                 visible: story_loader!,
                 child: const CircularProgressIndicator(
                   backgroundColor: Color(4294174695),
                 ),
+              ),
+            ),
+            Positioned(
+              top: 33,
+              left: 24.5,
+              width: 344,
+              height: 243,
+              child: Text(
+                'Finally, let\'s define the writing style.\nIs there a famous writer whose style\nyou\'d like your story to emulate? Choose \nfreely your favourite author, just name him \not them. Like Sonnet\n',
+                style: const TextStyle(
+                  fontFamily: 'Abril Fatface',
+                  color: Color(4278219392),
+                  fontSize: 20,
+                ),
+                textAlign: TextAlign.center,
               ),
             )
           ],

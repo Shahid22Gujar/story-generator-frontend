@@ -28,8 +28,8 @@ class _text_time_period_screenState extends State<text_time_period_screen> {
           children: [
             Positioned(
               top: 68,
-              left: 0,
-              width: 390,
+              left: 37,
+              width: 315,
               height: 76,
               child: Text(
                 'Now, let\'s define the time period for your story.',
@@ -43,23 +43,8 @@ class _text_time_period_screenState extends State<text_time_period_screen> {
               ),
             ),
             Positioned(
-              top: 144,
-              left: 22.5,
-              height: 75,
-              child: Text(
-                'when would you like it to take place?',
-                style: TextStyle(
-                  fontFamily: 'Abril Fatface',
-                  fontSize: 20,
-                  color: const Color(4278219392),
-                  fontWeight: FontWeight.w700,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Positioned(
-              top: 400.5,
-              left: 90,
+              top: 524,
+              left: 72.5,
               height: 43,
               width: 210,
               child: CustomButton(
@@ -82,10 +67,10 @@ class _text_time_period_screenState extends State<text_time_period_screen> {
               ),
             ),
             Positioned(
-              top: 260,
+              top: 402,
               left: 37,
               width: 315.5,
-              height: 100,
+              height: 122,
               child: Stack(
                 fit: StackFit.expand,
                 alignment: const Alignment(0, 0),
@@ -119,12 +104,28 @@ class _text_time_period_screenState extends State<text_time_period_screen> {
               ),
             ),
             Positioned(
-              top: 294,
+              top: 436,
               left: 55,
               width: 245,
               height: 33,
               child: TextFormField(
                 controller: time_period_text_input,
+              ),
+            ),
+            Positioned(
+              top: 144,
+              left: 37,
+              width: 315,
+              height: 192,
+              child: Text(
+                'When would you like it to take place?\nLike \'today\', \'near future\', \'medieval\ntimes\' ot name a specific year or a time period.',
+                style: TextStyle(
+                  fontFamily: 'Fraunces',
+                  fontWeight: FontWeight.w700,
+                  fontSize: 20,
+                  color: const Color(4278219392),
+                ),
+                textAlign: TextAlign.center,
               ),
             )
           ],

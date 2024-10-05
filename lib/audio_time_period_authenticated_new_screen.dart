@@ -31,7 +31,7 @@ class _audio_time_period_authenticated_new_screenState
               top: 40,
               left: 23,
               width: 347,
-              height: 154,
+              height: 113,
               child: Text(
                 'Now, let\'s define the time period for your story.',
                 style: TextStyle(
@@ -44,12 +44,12 @@ class _audio_time_period_authenticated_new_screenState
               ),
             ),
             Positioned(
-              top: 233,
-              left: 6.5,
-              width: 380,
+              top: 194,
+              left: 23,
+              width: 344,
               height: 201,
               child: Text(
-                'When would you like it to take place?\nLike \'today\', \'near future\', \'medieval\ntimes\' ot name a specific year or a rime period.',
+                'When would you like it to take place?\nLike \'today\', \'near future\', \'medieval\ntimes\' ot name a specific year or a time period.',
                 style: TextStyle(
                   fontFamily: 'Fraunces',
                   fontWeight: FontWeight.w700,
@@ -60,7 +60,7 @@ class _audio_time_period_authenticated_new_screenState
               ),
             ),
             Positioned(
-              top: 478,
+              top: 428,
               left: 24.5,
               width: 344,
               height: 104.5,
@@ -110,8 +110,8 @@ class _audio_time_period_authenticated_new_screenState
               ),
             ),
             Positioned(
-              top: 613,
-              left: 65,
+              top: 540,
+              left: 71,
               height: 57,
               width: 210,
               child: CustomButton(
@@ -136,7 +136,7 @@ class _audio_time_period_authenticated_new_screenState
               ),
             ),
             Positioned(
-              top: 509,
+              top: 459,
               left: 51,
               width: 274,
               height: 36,

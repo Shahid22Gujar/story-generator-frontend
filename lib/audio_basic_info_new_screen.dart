@@ -17,7 +17,8 @@ class audio_basic_info_new_screen extends StatefulWidget {
 @NowaGenerated()
 class _audio_basic_info_new_screenState
     extends State<audio_basic_info_new_screen> {
-  TextEditingController audio_genre_input = TextEditingController();
+  TextEditingController audio_genre_input =
+      TextEditingController(text: 'romantic');
 
   @override
   Widget build(BuildContext context) {
@@ -29,9 +30,9 @@ class _audio_basic_info_new_screenState
           children: [
             Positioned(
               top: 69,
-              left: -3.5,
-              width: 400,
-              height: 136,
+              left: 0,
+              width: 383,
+              height: 81,
               child: Text(
                 'Please provide some basic information,\nand we\'ll get started immediately.',
                 style: TextStyle(
@@ -44,10 +45,10 @@ class _audio_basic_info_new_screenState
               ),
             ),
             Positioned(
-              top: 183,
-              left: 17.5,
-              width: 379,
-              height: 219,
+              top: 177,
+              left: 0,
+              width: 371,
+              height: 225,
               child: Text(
                 'First, tell me what the genre of your story\nshould be, like \'romance\', \'thriler\', \n\'detective story\', \'love story\', \'science fiction\', \n\'future\', and so on.',
                 style: TextStyle(

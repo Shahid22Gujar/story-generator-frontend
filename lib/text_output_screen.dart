@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:nowa_runtime/nowa_runtime.dart';
 import 'package:mvp/story_output.dart';
+import 'package:mvp/homepage.dart';
 import 'package:mvp/dynamic_asset.dart';
 import 'package:mvp/api/BackendCollection.api.dart';
 import 'package:mvp/story_input.dart';
-import 'package:mvp/text_time_period_screen.dart';
 
-@NowaGenerated({'auto-width': 390, 'auto-height': 859})
+@NowaGenerated({'auto-width': 428, 'auto-height': 934})
 class text_output_screen extends StatefulWidget {
   @NowaGenerated({'loader': 'auto-constructor'})
   const text_output_screen({super.key});
@@ -28,10 +28,10 @@ class _text_output_screenState extends State<text_output_screen> {
       body: SafeArea(
         child: NFlex(
           direction: Axis.vertical,
-          spacing: 84,
+          spacing: 35,
           children: [
             const FlexSizedBox(
-              width: null,
+              width: 334.8094482421875,
               height: 38,
               child: Text(
                 'Great - here is your story',
@@ -43,7 +43,8 @@ class _text_output_screenState extends State<text_output_screen> {
               ),
             ),
             FlexSizedBox(
-              height: 533,
+              width: 362.40472412109375,
+              height: 411,
               child: SingleChildScrollView(
                 child: Text(
                   story_output.of(context).story_text_output!,
@@ -51,11 +52,10 @@ class _text_output_screenState extends State<text_output_screen> {
                   textAlign: TextAlign.start,
                 ),
               ),
-              width: double.infinity,
             ),
             FlexSizedBox(
-              width: 393,
-              height: 92,
+              width: 405,
+              height: 191,
               child: Container(
                 decoration: BoxDecoration(
                     color: const Color(4278219392),
@@ -64,10 +64,27 @@ class _text_output_screenState extends State<text_output_screen> {
                   alignment: const Alignment(0, 0),
                   children: [
                     Positioned(
-                      top: 22.5,
-                      left: 154.5,
-                      width: 84,
-                      height: 79,
+                      top: 46.25,
+                      left: 233,
+                      width: 131,
+                      height: 137,
+                      child: GestureDetector(
+                        child: Image(
+                          image: const AssetImage(
+                              'assets/DALL·E 2024-07-10 20.06.46 - Create a simple round icon featuring the phrase \'New Story\' in a blueish-grey color scheme. The design should be clean and minimalist, with the text i.png'),
+                          fit: BoxFit.cover,
+                        ),
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => const homepage()));
+                        },
+                      ),
+                    ),
+                    Positioned(
+                      top: 46.25,
+                      left: 43,
+                      width: 131,
+                      height: 137,
                       child: GestureDetector(
                         child: Image(
                           image: NetworkImage(regenerate_progress!),
@@ -91,6 +108,9 @@ class _text_output_screenState extends State<text_output_screen> {
                                 .writing_style_input,
                             is_audio_to_generate: false,
                             is_regenerate: true,
+                            story_genre: story_input
+                                .of(context, listen: false)
+                                .story_genre,
                           )
                               .then((value) {
                             regenerate_progress =
@@ -112,24 +132,6 @@ class _text_output_screenState extends State<text_output_screen> {
                           });
                         },
                       ),
-                    ),
-                    Positioned(
-                      top: 22.5,
-                      left: 285,
-                      width: 70,
-                      height: 79,
-                      child: GestureDetector(
-                        child: Image(
-                          image: const AssetImage(
-                              'assets/DALL·E 2024-07-10 20.06.46 - Create a simple round icon featuring the phrase \'New Story\' in a blueish-grey color scheme. The design should be clean and minimalist, with the text i.png'),
-                          fit: BoxFit.cover,
-                        ),
-                        onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) =>
-                                  const text_time_period_screen()));
-                        },
-                      ),
                     )
                   ],
                 ),
@@ -141,6 +143,13 @@ class _text_output_screenState extends State<text_output_screen> {
         ),
       ),
       backgroundColor: const Color(4294967295),
+      appBar: AppBar(
+        title: const Text(
+          'Back',
+          style: TextStyle(),
+        ),
+        backgroundColor: const Color(4294967295),
+      ),
     );
   }
 }

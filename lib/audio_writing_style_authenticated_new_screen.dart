@@ -34,8 +34,8 @@ class _audio_writing_style_authenticated_new_screenState
           children: [
             Positioned(
               top: 45,
-              left: 1.5,
-              width: 390,
+              left: 45.5,
+              width: 345.5,
               height: 198,
               child: Text(
                 'Finally, let\'s define the writing style.\nIs there a famous writer whose style\nyou\'d like your story to emulate? Choose \nfreely your favourite author, just name him \not them.\n',
@@ -95,8 +95,8 @@ class _audio_writing_style_authenticated_new_screenState
               ),
             ),
             Positioned(
-              top: 418,
-              left: 91.5,
+              top: 380,
+              left: 93.5,
               height: 48,
               width: 210,
               child: CustomButton(

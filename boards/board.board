@@ -2,9 +2,9 @@
     "canvases": [
         {
             "x": -142,
-            "y": 778,
+            "y": 697,
             "w": 390,
-            "h": 978,
+            "h": 925,
             "widget": "const sign_up()",
             "deps": [
                 "lib/sign_up.dart"

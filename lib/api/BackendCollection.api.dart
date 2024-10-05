@@ -8,11 +8,11 @@ import 'package:mvp/models/feedback_model.dart';
 
 @NowaGenerated({'editor': 'api'})
 class BackendCollection {
+  BackendCollection._();
+
   factory BackendCollection() {
     return _instance;
   }
-
-  BackendCollection._();
 
   final Dio _dioClient = Dio();
 
@@ -27,11 +27,12 @@ class BackendCollection {
       {String? user_email = 'nikhil123@gmail.com',
       String? first_name = 'test user',
       String? password = 'admin',
-      String? confirm_password = 'admin'}) async {
+      String? confirm_password = 'admin',
+      String? last_name = 'gujar'}) async {
     final Response res = await dioClient.post(
       'https://sgujar.pythonanywhere.com/accounts/register/',
       data:
-          '{\n    "email":"${user_email}",\n    "first_name":"${first_name}",\n    "password":"${password}",\n    "confirm_password":"${confirm_password}"\n}',
+          '{\n    "email": "${user_email}",\n    "first_name": "${first_name}",\n    "last_name": "${last_name}",\n    "password": "${password}",\n    "confirm_password": "${confirm_password}"\n}',
       options: Options(headers: {}),
     );
     return res;
@@ -75,12 +76,13 @@ class BackendCollection {
       String? character = 'young girl',
       String? writing_style = 'fairy tale',
       bool? is_audio_to_generate = false,
-      bool? is_regenerate = false}) async {
+      bool? is_regenerate = false,
+      String? story_genre = 'romantic'}) async {
     final Response res = await dioClient.post(
       'https://sgujar.pythonanywhere.com/accounts/story',
       options: Options(headers: {'Authorization': 'Bearer ${jwt_api_token}'}),
       data:
-          '{\n    "time_period": "${time_period}",\n    "character": "${character}",\n    "writing_style": "${writing_style}",\n    "is_audio_to_generate": "${is_audio_to_generate}",\n    "is_regenerate":"${is_regenerate}"\n}',
+          '{\n   "genre":"${story_genre}",\n    "time_period": "${time_period}",\n    "character": "${character}",\n    "writing_style": "${writing_style}",\n    "is_audio_to_generate": "${is_audio_to_generate}",\n    "is_regenerate": "${is_regenerate}"\n}',
     );
     return CreateStoriesByLoggedInUserModel1.fromJson(json: res.data!);
   }
@@ -90,12 +92,13 @@ class BackendCollection {
       String? character = 'a ghost',
       String? writing_style = 'sonnet',
       bool? is_audio_to_generate = true,
-      bool? is_regenerate = false}) async {
+      bool? is_regenerate = false,
+      String? story_genre = 'romantic'}) async {
     final Response res = await dioClient.post(
       'https://sgujar.pythonanywhere.com/accounts/story',
       options: Options(headers: {}),
       data:
-          '{\n    "time_period": "${time_period}",\n    "character": "${character}",\n    "writing_style": "${writing_style}",\n    "is_audio_to_generate": "${is_audio_to_generate}",\n    "is_regenerate":"${is_regenerate}"\n}',
+          '{\n    "genre":"${story_genre}",\n    "time_period": "${time_period}",\n    "character": "${character}",\n    "writing_style": "${writing_style}",\n    "is_audio_to_generate": "${is_audio_to_generate}",\n    "is_regenerate": "${is_regenerate}"\n}',
     );
     return CreateStoriesByGuestUserModel1.fromJson(json: res.data!);
   }

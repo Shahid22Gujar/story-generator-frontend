@@ -29,8 +29,8 @@ class _text_character_authenticate_screenState
           children: [
             Positioned(
               top: 37,
-              left: 1.5,
-              width: 390,
+              left: 49,
+              width: 314.5,
               height: 80,
               child: Text(
                 'Next, let\'s define the charters for your story.',
@@ -44,22 +44,7 @@ class _text_character_authenticate_screenState
               ),
             ),
             Positioned(
-              top: 144,
-              left: 17,
-              width: 359,
-              height: 93,
-              child: Text(
-                'Who would you like to be part of it?',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.w700,
-                  color: const Color(4278219392),
-                  fontFamily: 'Abril Fatface',
-                ),
-              ),
-            ),
-            Positioned(
-              top: 267,
+              top: 396,
               left: 49,
               width: 343.5,
               height: 115.5,
@@ -96,7 +81,7 @@ class _text_character_authenticate_screenState
               ),
             ),
             Positioned(
-              top: 285,
+              top: 412,
               left: 70,
               width: 228.5,
               height: 55,
@@ -105,8 +90,8 @@ class _text_character_authenticate_screenState
               ),
             ),
             Positioned(
-              top: 382.5,
-              left: 64,
+              top: 512,
+              left: 79.25,
               height: 43,
               width: 210,
               child: CustomButton(
@@ -126,6 +111,22 @@ class _text_character_authenticate_screenState
                   ),
                 ),
                 color: const Color(4278219392),
+              ),
+            ),
+            Positioned(
+              top: 165,
+              left: 39,
+              width: 315,
+              height: 172,
+              child: Text(
+                'Who would uou like to be part of it? Like\n\'\'a man\', \'a woman\', \'a man like Tom\', \'two\nteenage girl\', \'a rabbit and a unicorn \nfeel free to choose.',
+                style: TextStyle(
+                  fontFamily: 'Fraunces',
+                  fontWeight: FontWeight.w700,
+                  fontSize: 20,
+                  color: const Color(4278219392),
+                ),
+                textAlign: TextAlign.center,
               ),
             )
           ],

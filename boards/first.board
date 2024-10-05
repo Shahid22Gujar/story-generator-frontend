@@ -72,10 +72,10 @@
             ]
         },
         {
-            "x": -1969,
-            "y": -2279,
-            "w": 390,
-            "h": 874,
+            "x": -2006,
+            "y": -2264,
+            "w": 428,
+            "h": 934,
             "widget": "const text_output_screen()",
             "deps": [
                 "lib/text_output_screen.dart"
@@ -298,7 +298,7 @@
             ]
         },
         {
-            "x": -6158,
+            "x": -6159,
             "y": -2295,
             "w": 390,
             "h": 844,
@@ -380,8 +380,8 @@
         {
             "x": 3805,
             "y": -1226,
-            "w": 393,
-            "h": 808,
+            "w": 390,
+            "h": 844,
             "widget": "const StoryAudioPlayerScreen()",
             "deps": [
                 "lib/story_audio_player_screen.dart"
@@ -465,10 +465,10 @@
             ]
         },
         {
-            "x": -1910,
-            "y": -1037,
-            "w": 393,
-            "h": 719,
+            "x": -1289,
+            "y": -277,
+            "w": 398,
+            "h": 879,
             "widget": "const text_output_auth_screen()",
             "deps": [
                 "lib/text_output_auth_screen.dart"
@@ -517,16 +517,6 @@
             "widget": "Container(decoration:BoxDecoration(color:const Color(4278219392),borderRadius:BorderRadius.circular(0)),child:Stack(alignment:const Alignment(0,0),children:[Positioned(top:21.5,left:26,width:73,height:79,child:Image(image:const AssetImage('assets/DALL·E 2024-07-10 19.53.29 - Create a simple round icon featuring the phrase \\'Love it\\' in a blueish-grey color scheme. The design should be clean and minimalist, with the text in .png'),fit:BoxFit.cover,),),Positioned(top:22.5,left:154.5,width:84,height:79,child:Image(image:const AssetImage('assets/DALL·E 2024-07-10 19.54.28 - Create a simple round icon featuring the phrase \\'Do it again\\' in a blueish-grey color scheme. The design should be clean and minimalist, with the text.png'),fit:BoxFit.cover,),),Positioned(top:22.5,left:285,width:70,height:79,child:Image(image:const AssetImage('assets/DALL·E 2024-07-10 20.06.46 - Create a simple round icon featuring the phrase \\'New Story\\' in a blueish-grey color scheme. The design should be clean and minimalist, with the text i.png'),fit:BoxFit.cover,),)],),)"
         },
         {
-            "x": 3171,
-            "y": -1318,
-            "w": 393,
-            "h": 56,
-            "widget": "AppBar(title:const Back(),backgroundColor:const Color(4294967295),)",
-            "deps": [
-                "lib/back.dart"
-            ]
-        },
-        {
             "x": 6134,
             "y": -2664,
             "widget": "Image(image:const AssetImage('assets/pasted_image_-nMoXK.png'),fit:BoxFit.cover,)"
@@ -546,7 +536,18 @@
             "y": -667,
             "w": 100,
             "h": 100,
-            "widget": "Container(decoration:BoxDecoration(color:Color(0xffc4c4c4),borderRadius:BorderRadius.circular(0)),)"
+            "widget": "Container(decoration:BoxDecoration(color:const Color(4291085508),borderRadius:BorderRadius.circular(0)),)"
+        },
+        {
+            "x": -1413,
+            "y": 945,
+            "w": 217,
+            "h": 217,
+            "widget": "GestureDetector(child:Image(image:const AssetImage('assets/DALL·E 2024-07-10 19.53.29 - Create a simple round icon featuring the phrase \\'Love it\\' in a blueish-grey color scheme. The design should be clean and minimalist, with the text in .png'),fit:BoxFit.cover,),onTap:(){\n  BackendCollection().feedback(story_id:story_output.of(context,listen:false).story_id).then((value){\n  showDialog(builder:(context)=> const AlertDialog(title:Text('Loved',),),useRootNavigator:false,context:context,anchorPoint:const Offset(0,0),).then((value){\n},onError:(error){\n  print('error: ${error}');\n});\n},onError:(error){\n  print('error: ${error}');\n});\n},)",
+            "deps": [
+                "lib/api/BackendCollection.api.dart",
+                "lib/story_output.dart"
+            ]
         }
     ]
 }
